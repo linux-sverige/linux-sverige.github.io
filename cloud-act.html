@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚠️ CLOUD Act - Linux Sverige</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .cloud-page { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        .cloud-header { text-align: center; margin-bottom: 50px; }
+        .cloud-header h1 { font-size: 2.5rem; color: #1e3a5f; margin-bottom: 15px; }
+        .cloud-header .subtitle { font-size: 1.2rem; color: #666; }
+        .section { margin-bottom: 50px; }
+        .section h2 { color: #1e3a5f; border-bottom: 3px solid #ffb800; padding-bottom: 10px; margin-bottom: 25px; }
+        .warning-box { background: #fff3cd; border-left: 4px solid #dc3545; padding: 25px; border-radius: 8px; margin: 30px 0; }
+        .warning-box h3 { color: #856404; margin-bottom: 10px; }
+        .consequences-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 30px 0; }
+        .consequence-card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-top: 4px solid #dc3545; }
+        .consequence-card h3 { color: #dc3545; margin-bottom: 10px; }
+        .consequence-card p { color: #666; }
+        .quote { background: #f5f5f5; border-left: 4px solid #ffb800; padding: 20px; margin: 20px 0; font-style: italic; }
+        .quote-author { margin-top: 10px; font-weight: bold; color: #1e3a5f; }
+        .solution-box { background: #e8f4f8; padding: 30px; border-radius: 15px; margin-top: 40px; }
+        .solution-box h3 { color: #1e3a5f; margin-bottom: 20px; }
+        .solution-box a { display: inline-block; background: #ffb800; color: #1e3a5f; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; margin: 5px; }
+        .solution-box a:hover { background: #ffcc00; }
+        .back-link { display: inline-block; margin-bottom: 20px; color: #1e3a5f; text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+        .stat-highlight { background: #dc3545; color: white; padding: 3px 8px; border-radius: 4px; font-weight: bold; }
+        .timeline { border-left: 4px solid #ffb800; padding-left: 30px; margin: 30px 0; }
+        .timeline-item { margin-bottom: 25px; position: relative; }
+        .timeline-item::before { content: ''; position: absolute; left: -38px; top: 5px; width: 12px; height: 12px; background: #ffb800; border-radius: 50%; }
+        .timeline-item h4 { color: #1e3a5f; margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+    <div class="cloud-page">
+        <a href="/" class="back-link">← Tillbaka till startsidan</a>
+        
+        <div class="cloud-header">
+            <h1>⚠️ CLOUD Act</h1>
+            <p class="subtitle">Vad amerikansk lag betyder för din data i Europa</p>
+        </div>
+
+        <div class="warning-box">
+            <h3>⚠️ Varning</h3>
+            <p><strong>CLOUD Act (Clarifying Lawful Overseas Use of Data Act)</strong> trädde i kraft 23 mars 2018 och ger amerikanska myndigheter rätt att kräva ut data från amerikanska företag – <strong>oavsett var i världen datan lagras</strong>.</p>
+        </div>
+
+        <div class="section">
+            <h2>Vad betyder detta i praktiken?</h2>
+            <p>Om din organisation använder amerikanska molntjänster som Microsoft 365, Google Workspace, AWS, eller Dropbox, kan amerikanska myndigheter begära åtkomst till er data – utan att ni ens får veta om det.</p>
+            
+            <div class="consequences-grid">
+                <div class="consequence-card">
+                    <h3>📧 E-post & Kommunikation</h3>
+                    <p>Alla e-postmeddelanden, chattar, bilagor i Microsoft 365 eller Gmail kan krävas ut.</p>
+                </div>
+                <div class="consequence-card">
+                    <h3>📊 Affärsdata</h3>
+                    <p>Kunddatabaser, affärsplaner, strategiska dokument, kontrakt – allt lagrat i amerikanska moln.</p>
+                </div>
+                <div class="consequence-card">
+                    <h3>🏥 Känsliga personuppgifter</h3>
+                    <p>Journaler, patientdata, sociala register – skyddade av GDPR men ändå tillgängliga för USA.</p>
+                </div>
+                <div class="consequence-card">
+                    <h3>🔐 Säkerhetsdata</h3>
+                    <p>Krypteringsnycklar, säkerhetscertifikat, lösenord, åtkomsttoken.</p>
+                </div>
+                <div class="consequence-card">
+                    <h3>💰 Finansiell data</h3>
+                    <p>Banktransaktioner, bokföring, finansiella rapporter.</p>
+                </div>
+                <div class="consequence-card">
+                    <h3>🏛️ Myndighetsdata</h3>
+                    <p>Kommunala system, skatteuppgifter, utbildningsregister – kritisk infrastruktur.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>GDPR vs CLOUD Act – vem vinner?</h2>
+            <p>Europeiska GDPR ska skydda våra personuppgifter. Men CLOUD Act står över GDPR när det gäller amerikanska företag.</p>
+            
+            <div class="quote">
+                "Microsoft erkände under ed att de inte kan garantera integriteten för europeisk data vid ett juridiskt påbud från USA."
+                <div class="quote-author">— CIPD, 2023</div>
+            </div>
+            
+            <p><strong>Resultatet:</strong> Din data är inte skyddad av GDPR om den lagras av amerikanska företag.</p>
+        </div>
+
+        <div class="section">
+            <h2>Tidslinje</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>2018 – CLOUD Act träder i kraft</h4>
+                    <p>Signerad av President Trump som en del av omnibus spending bill.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>2020 – Schrems II-dom</h4>
+                    <p>EU-domstol ogiltigförklarar Privacy Shield – men CLOUD Act kvarstår.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>2023 – Ny dataöverenskommelse</h4>
+                    <p>EU och USA skapar nytt ramverk, men kritiker menar att det fortfarande inte skyddar tillräckligt.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>2026 – Frankrike agerar</h4>
+                    <p>Franska regeringen meddelar migration av 2,5M datorer till Linux för att undkomma CLOUD Act.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>En verklig riskanalys</h2>
+            <p>Jag gjorde nyligen en risk- och konsekvensanalys för en kund om vad som händer om USA använder CLOUD Act mot dem.</p>
+            
+            <div class="quote">
+                "Konsekvenserna skulle bli <strong>total kollaps</strong> av verksamheten. Alla system, all data, all verksamhet – plötsligt i händerna på en utländsk makt."
+                <div class="quote-author">— Mats Landstedt, Linux Sverige</div>
+            </div>
+            
+            <p>Det är inte en teoretisk risk. Det är en realitet vi måste ta på allvar.</p>
+        </div>
+
+        <div class="solution-box">
+            <h3>🐧 Lösningen: Digital suveränitet</h3>
+            <p style="margin-bottom: 20px;">Genom att använda öppen källkod och europeiska alternativ kan Sverige skydda sin data från utländsk lagstiftning.</p>
+            <p style="margin-bottom: 20px;"><strong>Frankrike visar vägen:</strong> 2,5 miljoner datorer migreras till Linux, €500M sparade årligen, och full kontroll över data.</p>
+            
+            <a href="https://t.me/+4X44Bx_3AhU1NzU0" target="_blank">📲 Gå med i communityt</a>
+            <a href="/europeiska-alternativ.html">🌍 Europeiska alternativ</a>
+            <a href="/case-studies/frankrike.html">🇫🇷 Frankrike case study</a>
+        </div>
+
+        <div class="section" style="margin-top: 40px;">
+            <h2>📖 Mer läsning</h2>
+            <ul style="line-height: 2;">
+                <li><a href="https://en.wikipedia.org/wiki/CLOUD_Act" target="_blank">CLOUD Act – Wikipedia</a></li>
+                <li><a href="https://www.eff.org/deeplinks/2018/03/congress-just-passed-section-cloud-act-which-will-threaten-privacy-people-around-world" target="_blank">EFF: CLOUD Act Analysis</a></li>
+                <li><a href="https://edpb.europa.eu/our-work-tools/our-documents/adequacy/art-65-gdpr-dispute-resolution_en" target="_blank">EDPB: Data Protection</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
