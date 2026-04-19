@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🇪🇺 Europa - Linux Sverige</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .case-study { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        .case-header { text-align: center; margin-bottom: 40px; }
+        .case-header h1 { font-size: 2.5rem; color: #1e3a5f; margin-bottom: 10px; }
+        .case-header .flag { font-size: 4rem; }
+        .case-header .tagline { font-size: 1.2rem; color: #666; }
+        .section { margin-bottom: 40px; }
+        .section h2 { color: #1e3a5f; border-bottom: 3px solid #ffb800; padding-bottom: 10px; margin-bottom: 20px; }
+        .country-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin: 30px 0; }
+        .country-card { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-left: 4px solid #ffb800; }
+        .country-card h3 { color: #1e3a5f; margin-bottom: 10px; font-size: 1.3rem; }
+        .country-card .flag { font-size: 2rem; margin-right: 10px; }
+        .country-card p { color: #666; line-height: 1.6; }
+        .country-card .status { display: inline-block; background: #d4edda; color: #155724; padding: 3px 10px; border-radius: 15px; font-size: 0.85rem; margin-top: 10px; }
+        .country-card .status-planned { background: #fff3cd; color: #856404; }
+        .eu-timeline { background: linear-gradient(135deg, #003399 0%, #0066cc 100%); color: white; padding: 30px; border-radius: 10px; margin: 30px 0; }
+        .eu-timeline h3 { margin-bottom: 20px; }
+        .timeline-item { margin-bottom: 15px; padding-left: 20px; border-left: 2px solid #ffb800; }
+        .back-link { display: inline-block; margin-bottom: 20px; color: #1e3a5f; text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="case-study">
+        <a href="/" class="back-link">← Tillbaka till startsidan</a>
+        
+        <div class="case-header">
+            <div class="flag">🇪🇺</div>
+            <h1>Europas Linux-våg</h1>
+            <p class="tagline">Flera EU-länder satsar på öppen källkod</p>
+        </div>
+
+        <div class="section">
+            <h2>Överblick</h2>
+            <p>Europa börjar vakna. Efter år av beroende av amerikanska teknologiska jättar inser allt fler länder värdet av digital suveränitet. Öppen källkod och Linux blir alltmer attraktivt.</p>
+            <p>Här är en överblick över vad som händer i Europa.</p>
+        </div>
+
+        <div class="section">
+            <h2>Aktiva projekt</h2>
+            
+            <div class="country-grid">
+                <div class="country-card">
+                    <h3><span class="flag">🇫🇷</span> Frankrike</h3>
+                    <p>Världens största Linux-migrering. 2,5 miljoner datorer via GendBuntu.</p>
+                    <span class="status">Pågående (2026-2029)</span>
+                </div>
+                
+                <div class="country-card">
+                    <h3><span class="flag">🇩🇪</span> Tyskland</h3>
+                    <p>Schleswig-Holstein planerar migrera 30,000 datorer. Flera delstater utvärderar.</p>
+                    <span class="status">Pågående</span>
+                </div>
+                
+                <div class="country-card">
+                    <h3><span class="flag">🇮🇹</span> Italien</h3>
+                    <p>Regioner som Umbria och Emilia-Romagna använder Linux i skolor och förvaltningar.</p>
+                    <span class="status">Regionalt aktivt</span>
+                </div>
+                
+                <div class="country-card">
+                    <h3><span class="flag">🇪🇸</span> Spanien</h3>
+                    <p>Extremadura-regionen pionjär med LinEx (2004). Valencia och andra regioner följer.</p>
+                    <span class="status">Regionalt aktivt</span>
+                </div>
+                
+                <div class="country-card">
+                    <h3><span class="flag">🇳🇱</span> Nederländerna</h3>
+                    <p>Amsterdam och Haag utvärderar Linux. Open-source-policy på nationell nivå.</p>
+                    <span class="status status-planned">Planerat</span>
+                </div>
+                
+                <div class="country-card">
+                    <h3><span class="flag">🇧🇪</span> Belgien</h3>
+                    <p>Bruxelles-regionen använder LibreOffice. Flandern utvärderar Linux.</p>
+                    <span class="status">Delvis aktivt</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>EU-nivå</h2>
+            <div class="eu-timeline">
+                <h3>Europeiska unionens initiativ</h3>
+                <div class="timeline-item">
+                    <strong>2017:</strong> EU publicerar "Open Source Software Strategy"
+                </div>
+                <div class="timeline-item">
+                    <strong>2020:</strong> EU-kommissionen öppnar källkod för flera system
+                </div>
+                <div class="timeline-item">
+                    <strong>2022:</strong> Interoperabilitetslag (Digital Markets Act) antagen
+                </div>
+                <div class="timeline-item">
+                    <strong>2024:</strong> EU Open Source Programme Office (OSPO) etablerat
+                </div>
+                <div class="timeline-item">
+                    <strong>2025:</strong> Förslag om obligatorisk öppen källkod för offentlig sektor
+                </div>
+                <div class="timeline-item">
+                    <strong>2026:</strong> Frankrike sätter igång – press på övriga länder
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Varför nu?</h2>
+            <p>Europa vaknar av flera skäl:</p>
+            <ul>
+                <li><strong>GDPR:</strong> Dataskyddsregler kräver kontroll över data</li>
+                <li><strong>Geopolitik:</strong> Beroende av USA/MS blir en risk</li>
+                <li><strong>Kostnad:</strong> Licensavgifter äter budgetar</li>
+                <li><strong>Säkerhet:</strong> Öppen källkod = transparens</li>
+                <li><strong>Hållbarhet:</strong> Gamla datorer fungerar med Linux</li>
+                <li><strong>Strategisk autonomi:</strong> EU vill vara oberoende</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Svenska möjligheter</h2>
+            <p> Sverige ligger efter. Vi har inget nationellt Linux-projekt. Men potentialen är enorm:</p>
+            <ul>
+                <li><strong>10 miljoner datorer</strong> i Sverige</li>
+                <li><strong>Offentlig sektor:</strong> 500,000+ datorer</li>
+                <li><strong>Skola:</strong> 300,000+ datorer</li>
+                <li><strong>Kommuner:</strong> 290 kommuner kan välja fritt</li>
+            </ul>
+            <p><strong>Linux Sverige vill ändra på detta.</strong></p>
+        </div>
+
+        <div class="section">
+            <h2>Lärdomar</h2>
+            <p>Från våra grannar kan vi lära:</p>
+            <ul>
+                <li><strong>Frankrike:</strong> Storskalighet är möjlig med politisk vilja</li>
+                <li><strong>Tyskland (München):</strong> Politik kan förstöra tekniska framgångar</li>
+                <li><strong>Spanien:</strong> Regionalt ledarskap kan driva förändring</li>
+                <li><strong>EU:</strong> Institutionellt stöd hjälper</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

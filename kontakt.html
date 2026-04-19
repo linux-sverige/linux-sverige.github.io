@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Linux Sverige</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .contact-page { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        .contact-header { text-align: center; margin-bottom: 50px; }
+        .contact-header h1 { font-size: 2.8rem; color: #1e3a5f; margin-bottom: 15px; }
+        .contact-header p { font-size: 1.2rem; color: #666; }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 40px 0; }
+        .contact-card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center; }
+        .contact-card .icon { font-size: 3rem; margin-bottom: 15px; }
+        .contact-card h3 { color: #1e3a5f; margin-bottom: 10px; }
+        .contact-card p { color: #666; margin-bottom: 15px; }
+        .contact-card a { color: #ffb800; text-decoration: none; font-weight: bold; }
+        .contact-card a:hover { text-decoration: underline; }
+        .contact-form { background: #f5f5f5; padding: 40px; border-radius: 15px; margin: 40px 0; }
+        .contact-form h2 { color: #1e3a5f; margin-bottom: 20px; text-align: center; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; color: #1e3a5f; font-weight: bold; margin-bottom: 8px; }
+        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 12px 15px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem; transition: border-color 0.3s; }
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: #ffb800; outline: none; }
+        .form-group textarea { min-height: 150px; resize: vertical; }
+        .submit-btn { background: #ffb800; color: #1e3a5f; border: none; padding: 15px 40px; border-radius: 25px; font-size: 1.1rem; font-weight: bold; cursor: pointer; width: 100%; transition: background 0.3s; }
+        .submit-btn:hover { background: #ffcc00; }
+        .social-links { display: flex; justify-content: center; gap: 20px; margin: 30px 0; }
+        .social-links a { display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #1e3a5f; color: white; border-radius: 50%; font-size: 1.5rem; text-decoration: none; transition: background 0.3s; }
+        .social-links a:hover { background: #ffb800; }
+        .back-link { display: inline-block; margin-bottom: 20px; color: #1e3a5f; text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+        .info-box { background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%); color: white; padding: 30px; border-radius: 10px; margin: 30px 0; }
+        .info-box h3 { color: #ffb800; margin-bottom: 15px; }
+        .info-box p { margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <div class="contact-page">
+        <a href="/" class="back-link">← Tillbaka till startsidan</a>
+        
+        <div class="contact-header">
+            <h1>📧 Kontakta Linux Sverige</h1>
+            <p>Vi vill höra från dig! Frågor, idéer, samarbeten?</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-card">
+                <div class="icon">🐙</div>
+                <h3>GitHub</h3>
+                <p>Bidra, rapportera buggar, följ utvecklingen</p>
+                <a href="https://github.com/linux-sverige" target="_blank">github.com/linux-sverige</a>
+            </div>
+            <div class="contact-card">
+                <div class="icon">💬</div>
+                <h3>Discord</h3>
+                <p>Community, diskussioner, support</p>
+                <p style="color: #999;">Kommer snart</p>
+            </div>
+            <div class="contact-card">
+                <div class="icon">📧</div>
+                <h3>E-post</h3>
+                <p>Formella förfrågningar, samarbeten</p>
+                <p style="color: #999;">Kommer snart</p>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h3>🚀 Just nu bygger vi communityt</h3>
+            <p>Linux Sverige är nytt (startat 2026-04-19). Vi arbetar på:</p>
+            <p>• Discord-server för community</p>
+            <p>• E-postlista / nyhetsbrev</p>
+            <p>• Sociala medier (LinkedIn, Twitter)</p>
+            <p>Under tiden: <strong>GitHub är bästa sättet att nå oss!</strong></p>
+        </div>
+
+        <div class="contact-form">
+            <h2>Skicka ett meddelande</h2>
+            <form action="https://formspree.io/f/xxxxx" method="POST">
+                <div class="form-group">
+                    <label for="name">Namn *</label>
+                    <input type="text" id="name" name="name" required placeholder="Ditt namn">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-post *</label>
+                    <input type="email" id="email" name="email" required placeholder="din@email.se">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Ämne</label>
+                    <select id="subject" name="subject">
+                        <option value="general">Allmän fråga</option>
+                        <option value="collaboration">Samarbete</option>
+                        <option value="contribute">Bidra / delta</option>
+                        <option value="political">Politisk fråga</option>
+                        <option value="technical">Teknisk fråga</option>
+                        <option value="other">Annat</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Meddelande *</label>
+                    <textarea id="message" name="message" required placeholder="Skriv ditt meddelande här..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Skicka meddelande</button>
+            </form>
+            <p style="text-align: center; color: #666; margin-top: 15px; font-size: 0.9rem;">
+                Alternativt: Kontakta oss direkt via <a href="https://github.com/linux-sverige" style="color: #ffb800;">GitHub</a>
+            </p>
+        </div>
+
+        <div style="text-align: center;">
+            <h3 style="color: #1e3a5f; margin-bottom: 15px;">Följ oss</h3>
+            <div class="social-links">
+                <a href="https://github.com/linux-sverige" target="_blank" title="GitHub">🐙</a>
+                <a href="#" title="LinkedIn (kommer)">💼</a>
+                <a href="#" title="Twitter (kommer)">🐦</a>
+                <a href="#" title="Discord (kommer)">💬</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
