@@ -1,169 +1,283 @@
-# Priser & Tjänster
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priser - Footloose Cloud</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .pricing-page { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+        .pricing-header { text-align: center; margin-bottom: 50px; }
+        .pricing-header h1 { font-size: 2.5rem; color: #1e3a5f; margin-bottom: 15px; }
+        .pricing-header .subtitle { font-size: 1.2rem; color: #666; }
+        .section { margin-bottom: 50px; }
+        .section h2 { color: #1e3a5f; border-bottom: 3px solid #ffb800; padding-bottom: 10px; margin-bottom: 25px; }
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin: 30px 0; }
+        .pricing-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .pricing-card .header { background: #1e3a5f; color: white; padding: 20px; text-align: center; }
+        .pricing-card .header h3 { font-size: 1.3rem; margin-bottom: 5px; }
+        .pricing-card .header .price { font-size: 1.8rem; font-weight: bold; color: #ffb800; }
+        .pricing-card .body { padding: 20px; }
+        .pricing-card ul { list-style: none; padding: 0; margin: 0; }
+        .pricing-card li { padding: 8px 0; border-bottom: 1px solid #eee; }
+        .pricing-card li:last-child { border-bottom: none; }
+        .pricing-card.popular { border: 3px solid #ffb800; }
+        .pricing-card.popular .header { background: #ffb800; color: #1e3a5f; }
+        .pricing-card.popular .header .price { color: #1e3a5f; }
+        .category-badge { display: inline-block; background: #e74c3c; color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; margin-bottom: 20px; }
+        .cta-box { background: #ffb800; padding: 30px; border-radius: 15px; text-align: center; margin-top: 40px; }
+        .cta-box h3 { color: #1e3a5f; margin-bottom: 15px; }
+        .cta-box a { display: inline-block; background: #1e3a5f; color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; margin: 5px; }
+        .cta-box a:hover { background: #2c5282; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        th { background: #1e3a5f; color: white; padding: 15px; text-align: left; }
+        td { padding: 12px 15px; border-bottom: 1px solid #eee; }
+        tr:hover { background: #f5f5f5; }
+        .note { background: #fff3cd; border-left: 4px solid #ffb800; padding: 15px; margin: 20px 0; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div class="pricing-page">
+        <div class="pricing-header">
+            <span class="category-badge">Footloose Cloud</span>
+            <h1>💰 Priser & Tjänster</h1>
+            <p class="subtitle">Transparenta priser för digital suveränitet</p>
+        </div>
 
----
+        <!-- Supportavtal Privatperson -->
+        <div class="section">
+            <h2>🛠️ Supportavtal - Privatperson</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="header">
+                        <h3>Bas</h3>
+                        <div class="price">195 SEK<span>/månad</span></div>
+                    </div>
+                    <div class="body">
+                        <ul>
+                            <li>✅ E-postsupport</li>
+                            <li>✅ 8-17 vardagar</li>
+                            <li>✅ 24h responstid</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="header">
+                        <h3>Standard</h3>
+                        <div class="price">395 SEK<span>/månad</span></div>
+                    </div>
+                    <div class="body">
+                        <ul>
+                            <li>✅ E-post + telefon</li>
+                            <li>✅ 8-17 vardagar</li>
+                            <li>✅ 4h responstid</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pricing-card">
+                    <div class="header">
+                        <h3>Premium</h3>
+                        <div class="price">795 SEK<span>/månad</span></div>
+                    </div>
+                    <div class="body">
+                        <ul>
+                            <li>✅ E-post + telefon + fjärrhjälp</li>
+                            <li>✅ 8-20 alla dagar</li>
+                            <li>✅ 2h responstid</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-**Footloose Cloud** – Varumärke för Nextcloud-tjänster och digital suveränitet
+        <!-- Supportavtal Företag -->
+        <div class="section">
+            <h2>🏢 Supportavtal - Företag & Organisation</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="header">
+                        <h3>Bas</h3>
+                        <div class="price">495 SEK<span>/månad</span></div>
+                    </div>
+                    <div class="body">
+                        <ul>
+                            <li>✅ E-postsupport</li>
+                            <li>✅ 8-17 vardagar</li>
+                            <li>✅ 24h responstid</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="header">
+                        <h3>Standard</h3>
+                        <div class="price">995 SEK<span>/månad</span></div>
+                    </div>
+                    <div class="body">
+                        <ul>
+                            <li>✅ E-post + telefon</li>
+                            <li>✅ 8-17 vardagar</li>
+                            <li>✅ 4h responstid</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pricing-card">
+                    <div class="header">
+                        <h3>Premium</h3>
+                        <div class="price">1 995 SEK<span>/månad</span></div>
+                    </div>
+                    <div class="body">
+                        <ul>
+                            <li>✅ E-post + telefon + fjärrhjälp</li>
+                            <li>✅ 8-20 alla dagar</li>
+                            <li>✅ 2h responstid</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="note">
+                <strong>Obs:</strong> Supportavtal gäller per installation. Alla priser exklusive moms för företag, inklusive moms för privatpersoner.
+            </div>
+        </div>
 
----
+        <!-- Konsultinsatser -->
+        <div class="section">
+            <h2>💼 Konsultinsatser</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tjänst</th>
+                        <th>Beskrivning</th>
+                        <th>Pris</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Analys & Kartläggning</strong></td>
+                        <td>Inventering av befintlig miljö, behovsanalys</td>
+                        <td>5 000 SEK</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Design & Planering</strong></td>
+                        <td>Arkitektur, migreringsplan, riskbedömning</td>
+                        <td>8 000 SEK</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Installation (litet)</strong></td>
+                        <td>1-10 arbetsstationer eller 1 server</td>
+                        <td>Från 10 000 SEK</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Installation (medel)</strong></td>
+                        <td>11-50 arbetsstationer eller 2-5 servrar</td>
+                        <td>Från 25 000 SEK</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Installation (stort)</strong></td>
+                        <td>51+ arbetsstationer eller enterprise-miljö</td>
+                        <td>Offert</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Utbildning (1 dag)</strong></td>
+                        <td>Grundkurs Linux för administratörer</td>
+                        <td>5 000 SEK</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Utbildning (2 dagar)</strong></td>
+                        <td>Avancerad kurs Linux</td>
+                        <td>8 000 SEK</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-## 🛠️ Supportavtal
+        <!-- Nextcloud Paket -->
+        <div class="section">
+            <h2>☁️ Nextcloud-tjänster</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="header">
+                        <h3>Basic</h3>
+                        <div class="price">5 000 SEK</div>
+                    </div>
+                    <div class="body">
+                        <ul>
+                            <li>✅ Installation</li>
+                            <li>✅ Grundkonfiguration</li>
+                            <li>✅ SSL-certifikat</li>
+                            <li>✅ 30 dagars support</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="header">
+                        <h3>Standard</h3>
+                        <div class="price">10 000 SEK</div>
+                    </div>
+                    <div class="body">
+                        <ul>
+                            <li>✅ Installation + migrering</li>
+                            <li>✅ Dataöverföring</li>
+                            <li>✅ Utbildning ingår</li>
+                            <li>✅ 60 dagars support</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pricing-card">
+                    <div class="header">
+                        <h3>Enterprise</h3>
+                        <div class="price">Offert</div>
+                    </div>
+                    <div class="body">
+                        <ul>
+                            <li>✅ Kluster-lösning</li>
+                            <li>✅ Hög tillgänglighet</li>
+                            <li>✅ Integrationer</li>
+                            <li>✅ SLA-avtal</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-**Billiga supportavtal per installation – fast månadskostnad**
+        <!-- Kompletta paket -->
+        <div class="section">
+            <h2>📦 Kompletta paket</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Paket</th>
+                        <th>Omfattning</th>
+                        <th>Pris</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Småföretag</strong></td>
+                        <td>Analys + design + installation (upp till 10 användare)</td>
+                        <td>25 000 SEK</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Medelstort</strong></td>
+                        <td>Analys + design + installation + utbildning (11-50 användare)</td>
+                        <td>75 000 SEK</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Enterprise</strong></td>
+                        <td>Fullständig migrering med projektledning (51+ användare)</td>
+                        <td>Offert</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-### 👤 Privatperson
-
-| Paket | Ingår | Pris/månad |
-|-------|-------|------------|
-| **Bas** | E-postsupport, 8-17 vardagar | 195 SEK |
-| **Standard** | E-post + telefon, 8-17 vardagar, 4h responstid | 395 SEK |
-| **Premium** | E-post + telefon + fjärrhjälp, 8-20 alla dagar, 2h responstid | 795 SEK |
-
-### 🏢 Företag & Organisation
-
-| Paket | Ingår | Pris/månad |
-|-------|-------|------------|
-| **Bas** | E-postsupport, 8-17 vardagar | 495 SEK |
-| **Standard** | E-post + telefon, 8-17 vardagar, 4h responstid | 995 SEK |
-| **Premium** | E-post + telefon + fjärrhjälp, 8-20 alla dagar, 2h responstid | 1 995 SEK |
-
-*Supportavtal gäller per installation (server eller arbetsstation)*
-*Alla priser exklusive moms för företag, inklusive moms för privatpersoner*
-
----
-
-## 💼 Konsultinsatser
-
-**Lågkostnadskonsult för design och leverans – små som stora installationer**
-
-| Tjänst | Beskrivning | Pris |
-|--------|-------------|------|
-| **Analys & Kartläggning** | Inventering av befintlig miljö, behovsanalys, rekommendationer | 5 000 SEK |
-| **Design & Planering** | Arkitektur, migreringsplan, riskbedömning | 8 000 SEK |
-| **Installation (litet)** | 1-10 arbetsstationer eller 1 server | Från 10 000 SEK |
-| **Installation (medel)** | 11-50 arbetsstationer eller 2-5 servrar | Från 25 000 SEK |
-| **Installation (stort)** | 51+ arbetsstationer eller enterprise-miljö | Offert |
-| **Utbildning** | Grundkurs Linux för administratörer (1 dag) | 5 000 SEK |
-| **Utbildning** | Avancerad kurs Linux (2 dagar) | 8 000 SEK |
-
----
-
-## 📦 Kompletta paket
-
-**Allt ingående – från analys till färdig installation**
-
-| Paket | Omfattning | Pris |
-|-------|------------|------|
-| **Småföretag** | Analys + design + installation (upp till 10 användare) | 25 000 SEK |
-| **Medelstort** | Analys + design + installation + utbildning (11-50 användare) | 75 000 SEK |
-| **Enterprise** | Fullständig migrering med projektledning (51+ användare) | Offert |
-
----
-
----
-
-## 📦 Nextcloud Home Edition
-
-**Färdigkonfigurerad Nextcloud – skickas hem till dig!**
-
-Vi levererar en komplett Nextcloud-lösning i en liten, energisnål server (Raspberry Pi eller Mini PC). Du behöver bara koppla in ström och nätverk – så är du igång!
-
-### Vad ingår?
-
-| Komponent | Beskrivning |
-|-----------|-------------|
-| ✅ Hårdvara | Raspberry Pi 5 eller Mini PC (energisnål, tyst) |
-| ✅ Nextcloud | Förinstallerat och konfigurerat |
-| ✅ Tailscale | Säker åtkomst från var som helst – ingen portöppning! |
-| ✅ SSL | Krypterad anslutning |
-| ✅ Kalender | Synk med telefon/dator (CalDAV) |
-| ✅ Kontakter | Adressbok (CardDAV) |
-| ✅ Filer | Dina dokument, bilder, musik |
-| ✅ 1TB lagring | SD-kort eller SSD inkluderat |
-| ✅ Fjärrsupport | 30 dagars e-postsupport |
-
-### Varför Tailscale?
-
-Tailscale ger dig säker åtkomst till din Nextcloud från var som helst – utan att öppna portar i din router. Det betyder:
-
-- 🔒 **Säkrare än vanlig portöppning**
-- 🌍 **Fungerar bakom CGNAT** (vanligt hos mobiloperatörer)
-- 📱 **Enkel åtkomst** från telefon, dator, tablet
-- 🚫 **Inga brandväggsproblem**
-
-### Priser
-
-| Modell | Hårdvara | Lagring | Pris |
-|--------|----------|---------|------|
-| **Basic** | Raspberry Pi 5 (4GB) | 128GB SD | 3 995 SEK |
-| **Standard** | Raspberry Pi 5 (8GB) | 512GB SSD | 5 995 SEK |
-| **Premium** | Mini PC (Intel N100) | 1TB SSD | 7 995 SEK |
-
-*Priser inklusive moms, frakt och 30 dagars support*
-
-### Tekniska specifikationer
-
-| Modell | CPU | RAM | Lagring | Effekt |
-|--------|-----|-----|--------|--------|
-| **Basic** | ARM Cortex-A76 | 4GB | 128GB microSD | 15W |
-| **Standard** | ARM Cortex-A76 | 8GB | 512GB NVMe SSD | 15W |
-| **Premium** | Intel N100 (4 kärnor) | 8GB | 1TB NVMe SSD | 25W |
-
-### Vad du behöver
-
-- Internetuppkoppling (WiFi eller kabel)
-- Strömsocket
-- En dator eller telefon för första installationen
-
-### Hur det fungerar
-
-1. **Beställ** – Välj modell och lagring
-2. **Vi konfigurerar** – Installerar Nextcloud + Tailscale + dina konton
-3. **Vi skickar** – Du får paketet hem med instruktioner
-4. **Koppla in** – Ström + nätverk = klart!
-5. **Logga in** – Vi skickar QR-kod för Tailscale + inloggningsuppgifter
-
-### Vill du ha mer lagring?
-
-| Tillval | Pris |
-|---------|------|
-| Extra SSD 1TB | +1 500 SEK |
-| Extra SSD 2TB | +2 500 SEK |
-| NAS-version (2x HDD) | Offert |
-
-### Beställning
-
-📧 **E-post:** info@act.se  
-📲 **Telegram:** https://t.me/+4X44Bx_3AhU1NzU0
-
-*Vi hjälper dig välja rätt modell för dina behov!*
-
----
-
-| Tjänst | Beskrivning | Pris |
-|--------|-------------|------|
-| **Nextcloud Basic** | Installation, grundkonfiguration, SSL | 5 000 SEK |
-| **Nextcloud Standard** | Installation + migrering av data + utbildning | 10 000 SEK |
-| **Nextcloud Enterprise** | Kluster, hög tillgänglighet, integrations | Offert |
-
----
-
-## 🎯 Varför välja oss?
-
-- ✅ **Låga priser** – Vi är en ideell stiftelse, inte ett vinstdrivande företag
-- ✅ **Öppen källkod** – Inga dolda licenskostnader
-- ✅ **Lokal expertis** – Svensk support och konsulter
-- ✅ **Full transparens** – Alla kostnader tydliga från start
-- ✅ **Återinvestering** – Överskott går tillbaka till verksamheten
-
----
-
-## 📞 Kontakta oss för offert
-
-- 📧 **E-post:** info@act.se
-- 📲 **Telegram:** https://t.me/+4X44Bx_3AhU1NzU0
-- 🌐 **Webb:** https://linux-sverige.github.io/
-- 📦 **Nextcloud Home:** https://linux-sverige.github.io/nextcloud-home.html
-
----
-
-*Alla priser exklusive moms. Supportavtal löper månadsvis. Konsultarvoden debiteras per halvdag eller hel dag.*
+        <!-- CTA -->
+        <div class="cta-box">
+            <h3>Redo att ta kontroll över din data?</h3>
+            <p style="margin-bottom: 20px; color: #1e3a5f;">Kontakta oss för offert eller frågor.</p>
+            <a href="mailto:ask@linux-sverige.se">📧 ask@linux-sverige.se</a>
+            <a href="https://footloose.cloud">☁️ Footloose Cloud</a>
+            <a href="https://t.me/+4X44Bx_3AhU1NzU0" target="_blank">📲 Telegram</a>
+        </div>
+    </div>
+</body>
+</html>
