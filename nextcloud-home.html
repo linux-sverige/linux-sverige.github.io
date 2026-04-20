@@ -30,7 +30,7 @@
         .product-card.popular { border: 3px solid #ffb800; }
         .product-card.popular .header { background: #ffb800; color: #1e3a5f; }
         .product-card.popular .header .hardware { color: #333; }
-        .step-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 30px 0; }
+        .step-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; margin: 30px 0; }
         .step-item { background: #f5f5f5; padding: 20px; border-radius: 10px; text-align: center; }
         .step-item .number { font-size: 2rem; color: #ffb800; font-weight: bold; }
         .step-item h4 { color: #1e3a5f; margin: 10px 0; }
@@ -48,6 +48,7 @@
         .tailscale-box li { padding: 8px 0; }
         .instruction-box { background: #fff3cd; border-left: 4px solid #ffb800; padding: 20px; margin: 20px 0; border-radius: 5px; }
         .instruction-box h4 { color: #1e3a5f; margin-top: 0; }
+        .included-badge { display: inline-block; background: #28a745; color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; margin-bottom: 20px; }
     </style>
 </head>
 <body>
@@ -55,13 +56,14 @@
         <a href="/" class="back-link">← Tillbaka till startsidan</a>
         
         <div class="home-header">
+            <span class="included-badge">✅ Office-paket ingår i alla lösningar</span>
             <h1>📦 Nextcloud Home Edition</h1>
-            <p class="subtitle">Färdigkonfigurerad Nextcloud på USB-sticka – starta din dator och kör!</p>
+            <p class="subtitle">Starta från USB → Installera på din befintliga dator</p>
         </div>
 
         <div class="hero-box">
-            <h2>Ditt eget moln – <span class="highlight">från din egen dator</span></h2>
-            <p>Vi levererar en komplett Nextcloud-lösning på en USB-sticka. Du sätter i stickan i <strong>din befintliga dator</strong>, startar om – och sen är du igång! Ingenting installeras på din dator. <strong>Du behöver inte köpa ny hårdvara.</strong></p>
+            <h2>Ditt eget moln – <span class="highlight">på din egen dator</span></h2>
+            <p>Du startar din dator från vår USB-sticka. Installationen görs automatiskt på <strong>din dators hårddisk</strong>. Sen är du igång! Du behöver inte köpa ny hårdvara.</p>
         </div>
 
         <div class="section">
@@ -98,14 +100,14 @@
                 <div class="product-card">
                     <div class="header">
                         <h3>📦 Basic</h3>
-                        <p class="hardware">128GB USB 3.0</p>
+                        <p class="hardware">Start-USB + installation</p>
                     </div>
                     <div class="body">
-                        <div class="price">2 495 SEK <span>inkl. moms & frakt</span></div>
+                        <div class="price">2 495 SEK <span>inkl. moms</span></div>
                         <ul>
-                            <li><span class="icon">💾</span> 128GB USB 3.0 (snabb)</li>
-                            <li><span class="icon">🔒</span> Ditt personliga Tailscale VPN</li>
-                            <li><span class="icon">☁️</span> Nextcloud förinstallerat</li>
+                            <li><span class="icon">💾</span> Start-USB 3.0</li>
+                            <li><span class="icon">☁️</span> Nextcloud på din dator</li>
+                            <li><span class="icon">🔒</span> Tailscale VPN ingår</li>
                             <li><span class="icon">📅</span> Kalender (CalDAV)</li>
                             <li><span class="icon">👥</span> Kontakter (CardDAV)</li>
                             <li><span class="icon">📁</span> Filer & delning</li>
@@ -121,14 +123,14 @@
                 <div class="product-card popular">
                     <div class="header">
                         <h3>📦 Standard</h3>
-                        <p class="hardware">256GB USB 3.0</p>
+                        <p class="hardware">Start-USB + installation</p>
                     </div>
                     <div class="body">
-                        <div class="price">3 495 SEK <span>inkl. moms & frakt</span></div>
+                        <div class="price">3 495 SEK <span>inkl. moms</span></div>
                         <ul>
-                            <li><span class="icon">💾</span> 256GB USB 3.0 (snabb)</li>
-                            <li><span class="icon">🔒</span> Ditt personliga Tailscale VPN</li>
-                            <li><span class="icon">☁️</span> Nextcloud förinstallerat</li>
+                            <li><span class="icon">💾</span> Start-USB 3.0</li>
+                            <li><span class="icon">☁️</span> Nextcloud på din dator</li>
+                            <li><span class="icon">🔒</span> Tailscale VPN ingår</li>
                             <li><span class="icon">📅</span> Kalender (CalDAV)</li>
                             <li><span class="icon">👥</span> Kontakter (CardDAV)</li>
                             <li><span class="icon">📁</span> Filer & delning</li>
@@ -144,14 +146,14 @@
                 <div class="product-card">
                     <div class="header">
                         <h3>📦 Premium</h3>
-                        <p class="hardware">512GB USB 3.0</p>
+                        <p class="hardware">Start-USB + installation</p>
                     </div>
                     <div class="body">
-                        <div class="price">4 995 SEK <span>inkl. moms & frakt</span></div>
+                        <div class="price">4 995 SEK <span>inkl. moms</span></div>
                         <ul>
-                            <li><span class="icon">💾</span> 512GB USB 3.0 (snabb)</li>
-                            <li><span class="icon">🔒</span> Ditt personliga Tailscale VPN</li>
-                            <li><span class="icon">☁️</span> Nextcloud förinstallerat</li>
+                            <li><span class="icon">💾</span> Start-USB 3.0</li>
+                            <li><span class="icon">☁️</span> Nextcloud på din dator</li>
+                            <li><span class="icon">🔒</span> Tailscale VPN ingår</li>
                             <li><span class="icon">📅</span> Kalender (CalDAV)</li>
                             <li><span class="icon">👥</span> Kontakter (CardDAV)</li>
                             <li><span class="icon">📁</span> Filer & delning</li>
@@ -159,15 +161,16 @@
                             <li><span class="icon">📱</span> Instruktioner för mobil/padda</li>
                             <li><span class="icon">🎧</span> 30 dagars support</li>
                         </ul>
-                        <p style="margin-top: 15px; color: #666; font-size: 0.85rem; text-align: center;">För den som behöver mycket lagring</p>
+                        <p style="margin-top: 15px; color: #666; font-size: 0.85rem; text-align: center;">För den som vill stötta projektet</p>
                     </div>
                 </div>
             </div>
+            <p style="text-align: center; margin-top: 20px; color: #28a745; font-weight: bold;">✅ Office-paket (OnlyOffice) ingår i samtliga lösningar!</p>
         </div>
 
         <div class="tailscale-box">
             <h3>🔒 Ditt personliga Tailscale VPN ingår</h3>
-            <p>Vi konfigurerar Tailscale åt dig innan vi skickar USB-stickan. Det betyder:</p>
+            <p>Vi konfigurerar Tailscale åt dig på USB-stickan. Det betyder:</p>
             <ul>
                 <li>✅ <strong>Säker åtkomst</strong> från var som helst i världen</li>
                 <li>✅ <strong>Ingen portöppning</strong> i din router</li>
@@ -198,18 +201,18 @@
                 </div>
                 <div class="step-item">
                     <div class="number">2</div>
-                    <h4>Vi konfigurerar</h4>
-                    <p>Nextcloud + Tailscale + dina konton</p>
+                    <h4>Vi skickar USB</h4>
+                    <p>Färdigkonfigurerad start-USB</p>
                 </div>
                 <div class="step-item">
                     <div class="number">3</div>
-                    <h4>Vi skickar</h4>
-                    <p>USB-sticka + instruktioner hem</p>
+                    <h4>Sätt i USB</h4>
+                    <p>Starta din dator från stickan</p>
                 </div>
                 <div class="step-item">
                     <div class="number">4</div>
-                    <h4>Sätt i USB</h4>
-                    <p>Starta datorn från stickan</p>
+                    <h4>Installation</h4>
+                    <p>Installeras på din hårddisk</p>
                 </div>
                 <div class="step-item">
                     <div class="number">5</div>
@@ -220,9 +223,9 @@
         </div>
 
         <div class="section">
-            <h2>Vad ingår i USB-stickan?</h2>
+            <h2>Vad ingår?</h2>
             <div class="feature-box">
-                <h4>☁️ Nextcloud</h4>
+                <h4>☁️ Nextcloud – installerat på din dator</h4>
                 <ul>
                     <li>✅ <strong>Filhantering</strong> – ladda upp, dela, versionshantering</li>
                     <li>✅ <strong>Kalender</strong> – synk med telefon/dator (CalDAV)</li>
@@ -259,7 +262,7 @@
             <h2>Vanliga frågor</h2>
             <div class="feature-box">
                 <h4>Installeras något på min dator?</h4>
-                <p><strong>Nej!</strong> Allt körs från USB-stickan. Din dators hårddisk påverkas inte alls.</p>
+                <p><strong>Ja!</strong> När du startar från USB-stickan installeras Nextcloud automatiskt på din dators hårddisk. Allt körs lokalt – inget moln, inga månadskostnader.</p>
             </div>
             <div class="feature-box">
                 <h4>Kan jag komma åt min Nextcloud från jobbet eller semestern?</h4>
@@ -267,15 +270,15 @@
             </div>
             <div class="feature-box">
                 <h4>Vad händer om jag stänger av datorn?</h4>
-                <p>Din Nextcloud är inte tillgänglig medan datorn är avstängd. Men all data sparas på USB-stickan.</p>
+                <p>Din Nextcloud är inte tillgänglig medan datorn är avstängd. Men all data sparas säkert på din dators hårddisk.</p>
             </div>
             <div class="feature-box">
-                <h4>Kan jag flytta USB-stickan till en annan dator?</h4>
-                <p><strong>Ja!</strong> Bara sätt i stickan i en annan dator och starta. Ditt moln följer med.</p>
+                <h4>Kan jag flytta installationen till en annan dator?</h4>
+                <p><strong>Ja!</strong> Vi kan hjälpa dig att migrera din Nextcloud till en ny dator när du behöver. Kontakta oss för hjälp.</p>
             </div>
             <div class="feature-box">
                 <h4>Vad är Office-paketet?</h4>
-                <p><strong>OnlyOffice</strong> ingår – ett fullständigt kontorspaket för dokument, kalkylblad och presentationer, direkt i webbläsaren.</p>
+                <p><strong>OnlyOffice</strong> ingår i alla våra lösningar – ett fullständigt kontorspaket för dokument, kalkylblad och presentationer, direkt i webbläsaren. Kompatibelt med Microsoft Office-format.</p>
             </div>
         </div>
 
