@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>☁️ Nextcloud-paket - Linux Sverige</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .nextcloud-page { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+        .nc-header { text-align: center; margin-bottom: 50px; }
+        .nc-header h1 { font-size: 2.5rem; color: #1e3a5f; margin-bottom: 15px; }
+        .nc-header .subtitle { font-size: 1.2rem; color: #666; }
+        .section { margin-bottom: 50px; }
+        .section h2 { color: #1e3a5f; border-bottom: 3px solid #ffb800; padding-bottom: 10px; margin-bottom: 25px; }
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 30px 0; }
+        .pricing-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .pricing-card .header { background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%); color: white; padding: 25px; text-align: center; }
+        .pricing-card .header h3 { font-size: 1.5rem; margin-bottom: 10px; }
+        .pricing-card .header .price { font-size: 2rem; font-weight: bold; color: #ffb800; }
+        .pricing-card .header .price span { font-size: 1rem; color: #aaa; }
+        .pricing-card .body { padding: 25px; }
+        .pricing-card ul { list-style: none; padding: 0; margin: 0; }
+        .pricing-card li { padding: 10px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start; }
+        .pricing-card li:last-child { border-bottom: none; }
+        .pricing-card li .icon { margin-right: 10px; flex-shrink: 0; }
+        .pricing-card.popular { border: 3px solid #ffb800; }
+        .pricing-card.popular .header { background: linear-gradient(135deg, #ffb800 0%, #ffcc00 100%); color: #1e3a5f; }
+        .pricing-card.popular .header .price { color: #1e3a5f; }
+        .feature-table { width: 100%; border-collapse: collapse; margin: 30px 0; }
+        .feature-table th { background: #1e3a5f; color: white; padding: 15px; text-align: left; }
+        .feature-table td { padding: 15px; border-bottom: 1px solid #eee; }
+        .feature-table tr:hover { background: #f5f5f5; }
+        .feature-table .check { color: #28a745; font-weight: bold; }
+        .addon-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 30px 0; }
+        .addon-card { background: #f5f5f5; padding: 20px; border-radius: 10px; text-align: center; }
+        .addon-card h4 { color: #1e3a5f; margin-bottom: 10px; }
+        .addon-card .price { font-size: 1.2rem; font-weight: bold; color: #ffb800; }
+        .cta-box { background: #e8f4f8; padding: 30px; border-radius: 15px; text-align: center; margin-top: 40px; }
+        .cta-box h3 { color: #1e3a5f; margin-bottom: 15px; }
+        .cta-box a { display: inline-block; background: #ffb800; color: #1e3a5f; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; margin: 5px; }
+        .cta-box a:hover { background: #ffcc00; }
+        .back-link { display: inline-block; margin-bottom: 20px; color: #1e3a5f; text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+        .info-box { background: #fff3cd; border-left: 4px solid #ffb800; padding: 20px; margin: 20px 0; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div class="nextcloud-page">
+        <a href="/" class="back-link">← Tillbaka till startsidan</a>
+        
+        <div class="nc-header">
+            <h1>☁️ Nextcloud-paket</h1>
+            <p class="subtitle">Ditt eget moln – full kontroll över din data</p>
+        </div>
+
+        <div class="section">
+            <h2>Välj ditt paket</h2>
+            
+            <div class="pricing-grid">
+                <!-- Basic -->
+                <div class="pricing-card">
+                    <div class="header">
+                        <h3>☁️ Basic</h3>
+                        <div class="price">5 000 SEK</div>
+                        <span>Installation & grundkonfiguration</span>
+                    </div>
+                    <div class="body">
+                        <ul>
+                            <li><span class="icon">✅</span> Serverinstallation av Nextcloud</li>
+                            <li><span class="icon">✅</span> SSL-certifikat (Let's Encrypt)</li>
+                            <li><span class="icon">✅</span> Grundkonfiguration (användare, grupper)</li>
+                            <li><span class="icon">✅</span> Filhantering med delning</li>
+                            <li><span class="icon">✅</span> Kalender (CalDAV)</li>
+                            <li><span class="icon">✅</span> Kontakter (CardDAV)</li>
+                            <li><span class="icon">✅</span> Webbgränssnitt</li>
+                            <li><span class="icon">✅</span> Hjälp med mobilappar</li>
+                        </ul>
+                        <p style="margin-top: 15px; color: #666; font-size: 0.9rem;"><strong>Tid:</strong> 1-2 dagar</p>
+                    </div>
+                </div>
+
+                <!-- Standard (Popular) -->
+                <div class="pricing-card popular">
+                    <div class="header">
+                        <h3>☁️ Standard</h3>
+                        <div class="price">10 000 SEK</div>
+                        <span>Mest populär! Inkl. migrering & utbildning</span>
+                    </div>
+                    <div class="body">
+                        <ul>
+                            <li><span class="icon">✅</span> Allt i Basic +</li>
+                            <li><span class="icon">✅</span> Datamigrering från Dropbox/OneDrive/Google</li>
+                            <li><span class="icon">✅</span> E-postmigrering (valfritt)</li>
+                            <li><span class="icon">✅</span> Kalendermigrering</li>
+                            <li><span class="icon">✅</span> 2h administratörsutbildning</li>
+                            <li><span class="icon">✅</span> Dokumentation & manual</li>
+                            <li><span class="icon">✅</span> 30 dagars e-postsupport</li>
+                        </ul>
+                        <p style="margin-top: 15px; color: #666; font-size: 0.9rem;"><strong>Tid:</strong> 2-3 dagar</p>
+                    </div>
+                </div>
+
+                <!-- Enterprise -->
+                <div class="pricing-card">
+                    <div class="header">
+                        <h3>☁️ Enterprise</h3>
+                        <div class="price">Offert</div>
+                        <span>Skalbar lösning för organisationer</span>
+                    </div>
+                    <div class="body">
+                        <ul>
+                            <li><span class="icon">✅</span> Allt i Standard +</li>
+                            <li><span class="icon">✅</span> Kluster & hög tillgänglighet</li>
+                            <li><span class="icon">✅</span> LDAP/AD-integration</li>
+                            <li><span class="icon">✅</span> SSO (Single Sign-On)</li>
+                            <li><span class="icon">✅</span> Automatisk backup</li>
+                            <li><span class="icon">✅</span> Övervakning & larm</li>
+                            <li><span class="icon">✅</span> Säkerhetshårdning</li>
+                            <li><span class="icon">✅</span> Projektledning & SLA</li>
+                            <li><span class="icon">✅</span> 90 dagars prioriterad support</li>
+                        </ul>
+                        <p style="margin-top: 15px; color: #666; font-size: 0.9rem;"><strong>Tid:</strong> Enligt offert</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Detaljerad jämförelse</h2>
+            <table class="feature-table">
+                <thead>
+                    <tr>
+                        <th>Funktion</th>
+                        <th>Basic</th>
+                        <th>Standard</th>
+                        <th>Enterprise</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Serverinstallation</td>
+                        <td class="check">✅</td>
+                        <td class="check">✅</td>
+                        <td class="check">✅</td>
+                    </tr>
+                    <tr>
+                        <td>SSL-certifikat</td>
+                        <td class="check">✅</td>
+                        <td class="check">✅</td>
+                        <td class="check">✅</td>
+                    </tr>
+                    <tr>
+                        <td>Filhantering & delning</td>
+                        <td class="check">✅</td>
+                        <td class="check">✅</td>
+                        <td class="check">✅</td>
+                    </tr>
+                    <tr>
+                        <td>Kalender (CalDAV)</td>
+                        <td class="check">✅</td>
+                        <td class="check">✅</td>
+                        <td class="check">✅</td>
+                    </tr>
+                    <tr>
+                        <td>Kontakter (CardDAV)</td>
+                        <td class="check">✅</td>
+                        <td class="check">✅</td>
+                        <td class="check">✅</td>
+                    </tr>
+                    <tr>
+                        <td>Datamigrering</td>
+                        <td>—</td>
+                        <td class="check">✅</td>
+                        <td class="check">✅</td>
+                    </tr>
+                    <tr>
+                        <td>Utbildning</td>
+                        <td>—</td>
+                        <td>2 timmar</td>
+                        <td>Efter behov</td>
+                    </tr>
+                    <tr>
+                        <td>Dokumentation</td>
+                        <td>—</td>
+                        <td class="check">✅</td>
+                        <td class="check">✅</td>
+                    </tr>
+                    <tr>
+                        <td>Inkluderad support</td>
+                        <td>—</td>
+                        <td>30 dagar</td>
+                        <td>90 dagar + SLA</td>
+                    </tr>
+                    <tr>
+                        <td>LDAP/AD-integration</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td class="check">✅</td>
+                    </tr>
+                    <tr>
+                        <td>SSO</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td class="check">✅</td>
+                    </tr>
+                    <tr>
+                        <td>Kluster/HA</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td class="check">✅</td>
+                    </tr>
+                    <tr>
+                        <td>Automatisk backup</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td class="check">✅</td>
+                    </tr>
+                    <tr>
+                        <td>Övervakning</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td class="check">✅</td>
+                    </tr>
+                    <tr>
+                        <td>Projektledning</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td class="check">✅</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Tilläggstjänster</h2>
+            <div class="addon-grid">
+                <div class="addon-card">
+                    <h4>📄 OnlyOffice/Collabora</h4>
+                    <p>Redigera dokument direkt i webbläsaren</p>
+                    <div class="price">3 000 SEK</div>
+                </div>
+                <div class="addon-card">
+                    <h4>📹 Nextcloud Talk</h4>
+                    <p>Videomöten och chatt</p>
+                    <div class="price">2 000 SEK</div>
+                </div>
+                <div class="addon-card">
+                    <h4>📝 Nextcloud Forms</h4>
+                    <p>Skapa formulär och enkäter</p>
+                    <div class="price">1 000 SEK</div>
+                </div>
+                <div class="addon-card">
+                    <h4>🔐 Two-Factor Auth</h4>
+                    <p>2FA för ökad säkerhet</p>
+                    <div class="price">1 500 SEK</div>
+                </div>
+                <div class="addon-card">
+                    <h4>💾 Automatisk backup</h4>
+                    <p>Daglig backup med retention</p>
+                    <div class="price">3 000 SEK</div>
+                </div>
+                <div class="addon-card">
+                    <h4>🌐 SSL på egen domän</h4>
+                    <p>Certifikat för din domän</p>
+                    <div class="price">1 000 SEK</div>
+                </div>
+                <div class="addon-card">
+                    <h4>👨‍🏫 Extra utbildning</h4>
+                    <p>Fler användare eller fördjupning</p>
+                    <div class="price">2 500 SEK/halvdag</div>
+                </div>
+                <div class="addon-card">
+                    <h4>🛠️ Supportavtal</h4>
+                    <p>Löpande teknisk support</p>
+                    <div class="price">Från 495 SEK/mån</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h4>💡 Observera</h4>
+            <p>Du står för server (kan hyras av oss). Alla priser exklusive moms. Basic och Standard installeras på en server. Enterprise kräver kravanalys inför offert.</p>
+        </div>
+
+        <div class="cta-box">
+            <h3> redo för ditt eget moln?</h3>
+            <p style="margin-bottom: 20px; color: #666;">Kontakta oss för en kostnadsfri konsultation.</p>
+            <a href="mailto:info@act.se">📧 info@act.se</a>
+            <a href="https://t.me/+4X44Bx_3AhU1NzU0" target="_blank">📲 Telegram</a>
+            <a href="/priser.html">💰 Fler tjänster</a>
+        </div>
+    </div>
+</body>
+</html>
