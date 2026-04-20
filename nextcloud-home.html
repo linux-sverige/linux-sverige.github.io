@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📦 Nextcloud Home Edition - Linux Sverige</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .home-page { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+        .home-header { text-align: center; margin-bottom: 50px; }
+        .home-header h1 { font-size: 2.5rem; color: #1e3a5f; margin-bottom: 15px; }
+        .home-header .subtitle { font-size: 1.2rem; color: #666; }
+        .hero-box { background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%); color: white; padding: 40px; border-radius: 20px; margin-bottom: 40px; text-align: center; }
+        .hero-box h2 { font-size: 1.8rem; margin-bottom: 15px; }
+        .hero-box .highlight { color: #ffb800; font-weight: bold; }
+        .section { margin-bottom: 50px; }
+        .section h2 { color: #1e3a5f; border-bottom: 3px solid #ffb800; padding-bottom: 10px; margin-bottom: 25px; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin: 30px 0; }
+        .product-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .product-card .header { background: #f5f5f5; padding: 20px; text-align: center; }
+        .product-card .header h3 { font-size: 1.3rem; color: #1e3a5f; margin-bottom: 5px; }
+        .product-card .header .hardware { color: #666; font-size: 0.9rem; }
+        .product-card .body { padding: 20px; }
+        .product-card .price { font-size: 2rem; font-weight: bold; color: #ffb800; text-align: center; margin: 15px 0; }
+        .product-card .price span { font-size: 0.9rem; color: #666; font-weight: normal; }
+        .product-card ul { list-style: none; padding: 0; margin: 0; }
+        .product-card li { padding: 8px 0; border-bottom: 1px solid #eee; display: flex; align-items: center; }
+        .product-card li:last-child { border-bottom: none; }
+        .product-card li .icon { margin-right: 10px; }
+        .product-card.popular { border: 3px solid #ffb800; }
+        .product-card.popular .header { background: #ffb800; color: #1e3a5f; }
+        .product-card.popular .header .hardware { color: #333; }
+        .spec-table { width: 100%; border-collapse: collapse; margin: 30px 0; }
+        .spec-table th { background: #1e3a5f; color: white; padding: 12px; text-align: left; }
+        .spec-table td { padding: 12px; border-bottom: 1px solid #eee; }
+        .spec-table tr:hover { background: #f5f5f5; }
+        .step-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 30px 0; }
+        .step-item { background: #f5f5f5; padding: 20px; border-radius: 10px; text-align: center; }
+        .step-item .number { font-size: 2rem; color: #ffb800; font-weight: bold; }
+        .step-item h4 { color: #1e3a5f; margin: 10px 0; }
+        .feature-box { background: #e8f4f8; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        .feature-box h4 { color: #1e3a5f; margin-bottom: 10px; }
+        .cta-box { background: #ffb800; padding: 30px; border-radius: 15px; text-align: center; margin-top: 40px; }
+        .cta-box h3 { color: #1e3a5f; margin-bottom: 15px; }
+        .cta-box a { display: inline-block; background: #1e3a5f; color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; margin: 5px; }
+        .cta-box a:hover { background: #2c5282; }
+        .back-link { display: inline-block; margin-bottom: 20px; color: #1e3a5f; text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+        .tailscale-box { background: #1e3a5f; color: white; padding: 30px; border-radius: 15px; margin: 30px 0; }
+        .tailscale-box h3 { color: #ffb800; margin-bottom: 15px; }
+        .tailscale-box ul { list-style: none; padding: 0; }
+        .tailscale-box li { padding: 8px 0; }
+        .storage-addons { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin: 20px 0; }
+        .storage-addon { background: #f5f5f5; padding: 15px; border-radius: 10px; text-align: center; }
+        .storage-addon h4 { color: #1e3a5f; font-size: 0.9rem; }
+        .storage-addon .price { color: #ffb800; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="home-page">
+        <a href="/" class="back-link">← Tillbaka till startsidan</a>
+        
+        <div class="home-header">
+            <h1>📦 Nextcloud Home Edition</h1>
+            <p class="subtitle">Färdigkonfigurerad Nextcloud – skickas hem till dig!</p>
+        </div>
+
+        <div class="hero-box">
+            <h2>Ditt eget moln – <span class="highlight">plug & play</span></h2>
+            <p>Vi levererar en komplett Nextcloud-lösning i en liten, energisnål server. Du behöver bara koppla in ström och nätverk – så är du igång!</p>
+        </div>
+
+        <div class="section">
+            <h2>Välj din modell</h2>
+            
+            <div class="product-grid">
+                <!-- Basic -->
+                <div class="product-card">
+                    <div class="header">
+                        <h3>📦 Basic</h3>
+                        <p class="hardware">Raspberry Pi 5 (4GB)</p>
+                    </div>
+                    <div class="body">
+                        <div class="price">3 995 SEK <span>inkl. moms</span></div>
+                        <ul>
+                            <li><span class="icon">💾</span> 128GB microSD</li>
+                            <li><span class="icon">🔒</span> Tailscale VPN</li>
+                            <li><span class="icon">☁️</span> Nextcloud installerat</li>
+                            <li><span class="icon">📅</span> Kalender (CalDAV)</li>
+                            <li><span class="icon">👥</span> Kontakter (CardDAV)</li>
+                            <li><span class="icon">📁</span> Filer & delning</li>
+                            <li><span class="icon">⚡</span> 15W strömadapter</li>
+                            <li><span class="icon">🎧</span> 30 dagars support</li>
+                        </ul>
+                        <p style="margin-top: 15px; color: #666; font-size: 0.85rem; text-align: center;">Perfekt för nybörjare</p>
+                    </div>
+                </div>
+
+                <!-- Standard (Popular) -->
+                <div class="product-card popular">
+                    <div class="header">
+                        <h3>📦 Standard</h3>
+                        <p class="hardware">Raspberry Pi 5 (8GB)</p>
+                    </div>
+                    <div class="body">
+                        <div class="price">5 995 SEK <span>inkl. moms</span></div>
+                        <ul>
+                            <li><span class="icon">💾</span> 512GB NVMe SSD</li>
+                            <li><span class="icon">🔒</span> Tailscale VPN</li>
+                            <li><span class="icon">☁️</span> Nextcloud installerat</li>
+                            <li><span class="icon">📅</span> Kalender (CalDAV)</li>
+                            <li><span class="icon">👥</span> Kontakter (CardDAV)</li>
+                            <li><span class="icon">📁</span> Filer & delning</li>
+                            <li><span class="icon">⚡</span> 15W strömadapter</li>
+                            <li><span class="icon">🎧</span> 30 dagars support</li>
+                        </ul>
+                        <p style="margin-top: 15px; color: #666; font-size: 0.85rem; text-align: center;"><strong>Mest populär!</strong></p>
+                    </div>
+                </div>
+
+                <!-- Premium -->
+                <div class="product-card">
+                    <div class="header">
+                        <h3>📦 Premium</h3>
+                        <p class="hardware">Mini PC (Intel N100)</p>
+                    </div>
+                    <div class="body">
+                        <div class="price">7 995 SEK <span>inkl. moms</span></div>
+                        <ul>
+                            <li><span class="icon">💾</span> 1TB NVMe SSD</li>
+                            <li><span class="icon">🔒</span> Tailscale VPN</li>
+                            <li><span class="icon">☁️</span> Nextcloud installerat</li>
+                            <li><span class="icon">📅</span> Kalender (CalDAV)</li>
+                            <li><span class="icon">👥</span> Kontakter (CardDAV)</li>
+                            <li><span class="icon">📁</span> Filer & delning</li>
+                            <li><span class="icon">⚡</span> Strömadapter</li>
+                            <li><span class="icon">🎧</span> 30 dagars support</li>
+                        </ul>
+                        <p style="margin-top: 15px; color: #666; font-size: 0.85rem; text-align: center;">För den kräsne</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tailscale-box">
+            <h3>🔒 Varför Tailscale?</h3>
+            <p>Tailscale ger dig säker åtkomst till din Nextcloud från var som helst – utan att öppna portar i din router.</p>
+            <ul>
+                <li>✅ <strong>Säkrare</strong> än vanlig portöppning</li>
+                <li>✅ <strong>Fungerar bakom CGNAT</strong> (vanligt hos mobiloperatörer)</li>
+                <li>✅ <strong>Enkel åtkomst</strong> från telefon, dator, tablet</li>
+                <li>✅ <strong>Inga brandväggsproblem</strong> – fungerar överallt</li>
+                <li>✅ <strong>Automatisk uppkoppling</strong> – du behöver inte konfigurera</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Tekniska specifikationer</h2>
+            <table class="spec-table">
+                <thead>
+                    <tr>
+                        <th>Modell</th>
+                        <th>CPU</th>
+                        <th>RAM</th>
+                        <th>Lagring</th>
+                        <th>Effekt</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Basic</strong></td>
+                        <td>ARM Cortex-A76 (4 kärnor)</td>
+                        <td>4GB</td>
+                        <td>128GB microSD</td>
+                        <td>~15W</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Standard</strong></td>
+                        <td>ARM Cortex-A76 (4 kärnor)</td>
+                        <td>8GB</td>
+                        <td>512GB NVMe SSD</td>
+                        <td>~15W</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Premium</strong></td>
+                        <td>Intel N100 (4 kärnor)</td>
+                        <td>8GB</td>
+                        <td>1TB NVMe SSD</td>
+                        <td>~25W</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="color: #666; font-size: 0.9rem;">*Energikostnad: ca 15-25W = ~30-50 SEK/månad vid 1.50 SEK/kWh</p>
+        </div>
+
+        <div class="section">
+            <h2>Hur fungerar det?</h2>
+            <div class="step-list">
+                <div class="step-item">
+                    <div class="number">1</div>
+                    <h4>Beställ</h4>
+                    <p>Välj modell och betala</p>
+                </div>
+                <div class="step-item">
+                    <div class="number">2</div>
+                    <h4>Vi konfigurerar</h4>
+                    <p>Installerar Nextcloud + Tailscale</p>
+                </div>
+                <div class="step-item">
+                    <div class="number">3</div>
+                    <h4>Vi skickar</h4>
+                    <p>Du får paket hem</p>
+                </div>
+                <div class="step-item">
+                    <div class="number">4</div>
+                    <h4>Koppla in</h4>
+                    <p>Ström + nätverk = klart!</p>
+                </div>
+                <div class="step-item">
+                    <div class="number">5</div>
+                    <h4>Logga in</h4>
+                    <p>QR-kod + inloggningsuppgifter</p>
+                </div>
+            </div>
+            <div class="feature-box">
+                <h4>📦 I paketet ingår:</h4>
+                <ul>
+                    <li>✅ Server (Raspberry Pi eller Mini PC)</li>
+                    <li>✅ Strömadapter</li>
+                    <li>✅ Nätverkskabel (1m)</li>
+                    <li>✅ Instruktionsmanual (svenska)</li>
+                    <li>✅ QR-kod för Tailscale-anslutning</li>
+                    <li>✅ Inloggningsuppgifter till Nextcloud</li>
+                    <li>✅ 30 dagars e-postsupport</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Vad du behöver</h2>
+            <div class="feature-box">
+                <ul>
+                    <li>✅ <strong>Internetuppkoppling</strong> – WiFi eller kabel</li>
+                    <li>✅ <strong>Strömsocket</strong> – vanlig svenskt uttag</li>
+                    <li>✅ <strong>Dator eller telefon</strong> – för första installationen (skanna QR-kod)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Tillägg & tillval</h2>
+            
+            <h4>Mer lagring</h4>
+            <div class="storage-addons">
+                <div class="storage-addon">
+                    <h4>Extra SSD 1TB</h4>
+                    <div class="price">+1 500 SEK</div>
+                </div>
+                <div class="storage-addon">
+                    <h4>Extra SSD 2TB</h4>
+                    <div class="price">+2 500 SEK</div>
+                </div>
+                <div class="storage-addon">
+                    <h4>NAS-version (2x HDD)</h4>
+                    <div class="price">Offert</div>
+                </div>
+            </div>
+
+            <h4>Supportavtal (efter 30 dagar)</h4>
+            <div class="storage-addons">
+                <div class="storage-addon">
+                    <h4>Bas (e-post)</h4>
+                    <div class="price">195 SEK/mån</div>
+                </div>
+                <div class="storage-addon">
+                    <h4>Standard (+ telefon)</h4>
+                    <div class="price">395 SEK/mån</div>
+                </div>
+                <div class="storage-addon">
+                    <h4>Premium (+ fjärrhjälp)</h4>
+                    <div class="price">795 SEK/mån</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Vanliga frågor</h2>
+            <div class="feature-box">
+                <h4>Behöver jag öppna portar i min router?</h4>
+                <p><strong>Nej!</strong> Tailscale fungerar utan att du behöver konfigurera din router. Det är en av de stora fördelarna.</p>
+            </div>
+            <div class="feature-box">
+                <h4>Kan jag komma åt min Nextcloud från jobbet eller semestern?</h4>
+                <p><strong>Ja!</strong> Tailscale låter dig ansluta från var som helst i världen – bara du har internet.</p>
+            </div>
+            <div class="feature-box">
+                <h4>Vad händer om strömmen går?</h4>
+                <p>Din Nextcloud startar automatiskt när strömmen kommer tillbaka. Data sparas på SD-kort/SSD.</p>
+            </div>
+            <div class="feature-box">
+                <h4>Kan jag flytta min Nextcloud till en annan plats?</h4>
+                <p><strong>Absolut!</strong> Bara koppla med dig servern. Tailscale fungerar var du än är.</p>
+            </div>
+        </div>
+
+        <div class="cta-box">
+            <h3>Redo för ditt eget moln?</h3>
+            <p style="margin-bottom: 20px; color: #1e3a5f;">Kontakta oss för beställning eller frågor.</p>
+            <a href="mailto:info@act.se">📧 info@act.se</a>
+            <a href="https://t.me/+4X44Bx_3AhU1NzU0" target="_blank">📲 Telegram</a>
+            <a href="/priser.html">💰 Alla tjänster</a>
+        </div>
+    </div>
+</body>
+</html>
