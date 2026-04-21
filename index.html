@@ -14,6 +14,14 @@
         .hero { background: white; padding: 60px 0; }
         .hero h2 { color: #1e3a5f; font-size: 2rem; margin-bottom: 20px; text-align: center; }
         .hero p { max-width: 800px; margin: 0 auto 20px; text-align: center; font-size: 1.1rem; }
+        .delivery { background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%); color: white; padding: 60px 0; }
+        .delivery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 30px; }
+        .delivery-card { background: rgba(255,255,255,0.1); border-radius: 15px; padding: 30px; border: 2px solid rgba(255,184,0,0.3); }
+        .delivery-card h3 { color: #ffb800; font-size: 1.5rem; margin-bottom: 15px; }
+        .delivery-card ul { list-style: none; padding: 0; }
+        .delivery-card li { padding: 8px 0; padding-left: 25px; position: relative; }
+        .delivery-card li:before { content: "✓"; color: #ffb800; position: absolute; left: 0; font-weight: bold; }
+        .delivery-card .price { font-size: 1.3rem; color: #ffb800; font-weight: bold; margin-top: 15px; }
         .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 60px 0; }
         .feature { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
         .feature h3 { color: #1e3a5f; margin-bottom: 15px; }
@@ -43,6 +51,57 @@
         </div>
     </section>
     
+    <section class="delivery">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2rem; margin-bottom: 10px;">🚀 Våra Leveranser</h2>
+            <p style="text-align: center; opacity: 0.9; margin-bottom: 20px;">Komplett IT-lösning för företag och privatpersoner</p>
+            
+            <div class="delivery-grid">
+                <div class="delivery-card">
+                    <h3>💻 Typarbetsplatser</h3>
+                    <p style="margin-bottom: 15px;">Linux installerat på hårdisk via USB. Ersätter Windows och macOS till 100%.</p>
+                    <ul>
+                        <li>Mycket billigare än Windows/Mac</li>
+                        <li>Extremt mycket säkrare</li>
+                        <li>Minimal skillnad för användaren</li>
+                        <li>Samtlig mjukvara ingår gratis</li>
+                        <li>Office-paket ingår</li>
+                        <li>Fungerar på gammal hårdvara</li>
+                    </ul>
+                    <div class="price">Från 0 kr/licens</div>
+                </div>
+                
+                <div class="delivery-card">
+                    <h3>☁️ Molnlösning (Nextcloud)</h3>
+                    <p style="margin-bottom: 15px;">Ersätter Microsoft 365 och iCloud med en säker svensk lösning.</p>
+                    <ul>
+                        <li>Ersätter alla molntjänster</li>
+                        <li>Samarbetsnav för team</li>
+                        <li>Fildelning, kalender, uppgifter</li>
+                        <li>All mjukvara ingår gratis</li>
+                        <li>Version för företag</li>
+                        <li>Version för privatpersoner</li>
+                    </ul>
+                    <div class="price">Från 0 kr/månad</div>
+                </div>
+                
+                <div class="delivery-card">
+                    <h3>🎧 Helpdesk & Fjärrsupport</h3>
+                    <p style="margin-bottom: 15px;">Utbildning och stöd för användare.</p>
+                    <ul>
+                        <li>Personlig support</li>
+                        <li>Fjärrhjälp vid problem</li>
+                        <li>Utbildning i Linux</li>
+                        <li>Migration-assistans</li>
+                        <li>Dokumentation och guider</li>
+                        <li>Löpande uppföljning</li>
+                    </ul>
+                    <div class="price">Supportavtal efter behov</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <section class="container features">
         <div class="feature">
             <h3>🇸🇪 Digital Suveränitet</h3>
@@ -65,31 +124,12 @@
             <p>Fungerar på gammal hårdvara. Mindre e-avfall och cirkulär ekonomi.</p>
         </div>
         <div class="feature">
-            <h3>🇫🇷 Förebilder</h3>
-            <p>Frankrike migrerar 2,5 miljoner datorer till Linux 2026. Vi kan också!</p>
+            <h3>🇫🇷 Franska Revolutionen 2.0</h3>
+            <p>Frankrike migrerar 2,5 miljoner datorer till Linux 2026. Sveriges tur nu!</p>
         </div>
         <div class="feature">
             <h3>⚠️ Politisk Risk</h3>
             <p>Nyckfulla ledare som Trump kan när som helst stänga av tillgången. Sveriges IT-infrastruktur får inte vara beroende av amerikanska politiska väderkvarnar.</p>
-        </div>
-        <div class="feature">
-            <h3>☁️ Molntjänsternas Hot</h3>
-            <p><strong>De största hoten med stora molntjänster:</strong></p>
-            <ul style="list-style: none; padding: 0; margin-top: 10px;">
-                <li style="padding: 5px 0;">❌ <strong>Du äger inte din data</strong> – Du hyr tillgång</li>
-                <li style="padding: 5px 0;">❌ <strong>Din data används mot dig</strong> – AI-träning, profilering, reklam</li>
-                <li style="padding: 5px 0;">❌ <strong>Amerikansk lag gäller</strong> – CLOUD Act, Patriot Act, FISA 702</li>
-                <li style="padding: 5px 0;">❌ <strong>Säkerhetshot</strong> – Dataintrång, insider-hot, ransomware</li>
-                <li style="padding: 5px 0;">❌ <strong>Beroende</strong> – Vendor lock-in, prisökningar, avstängning</li>
-                <li style="padding: 5px 0;">❌ <strong>Integritet</strong> – Övervakningskapitalism, social scoring</li>
-            </ul>
-            <p style="margin-top: 15px;"><strong>💡 VARFÖR DET ÄR ETT PROBLEM FÖR SVERIGE:</strong></p>
-            <ul style="list-style: none; padding: 0; margin-top: 5px;">
-                <li style="padding: 3px 0;">🔴 <strong>GDPR-konflikt</strong> – Amerikansk lag krockar med EU:s dataskydd</li>
-                <li style="padding: 3px 0;">🔴 <strong>Suveränitetsfråga</strong> – Amerikansk lag gäller för svensk data</li>
-                <li style="padding: 3px 0;">🔴 <strong>Ingen rättslig prövning</strong> – Inget svenskt domstolsbeslut krävs</li>
-                <li style="padding: 3px 0;">🔴 <strong>Ingen information</strong> – Du får inte veta om dina data lämnas ut</li>
-            </ul>
         </div>
     </section>
     
@@ -118,10 +158,10 @@
     
     <section class="cta">
         <div class="container">
-            <h2>Gör som Frankrike – ta kontrollen!</h2>
-            <p style="margin-bottom: 30px; max-width: 800px; margin-left: auto; margin-right: auto;">Frankrike migrerar 2,5 miljoner datorer till Linux och sparar €500M/år. Sverige kan göra samma sak. Bli en del av rörelsen för digital suveränitet.</p>
-            <a href="https://footloose.cloud" style="background: #e74c3c; font-size: 1.2rem; padding: 18px 50px;">☁️ Footloose Cloud →</a>
+            <h2>🇫🇷 Franska Revolutionen 2.0 – Gör som Frankrike!</h2>
+            <p style="margin-bottom: 30px; max-width: 800px; margin-left: auto; margin-right: auto;">Frankrike migrerar 2,5 miljoner datorer till Linux och sparar €500M/år. Nu är det Sveriges tur. Bli en del av rörelsen för digital suveränitet.</p>
             <a href="/kontakt.html" style="background: #ffb800; font-size: 1.2rem; padding: 18px 50px;">Kontakta oss →</a>
+            <a href="/priser.html" style="background: #27ae60; font-size: 1.2rem; padding: 18px 50px;">💰 Se priser →</a>
             <a href="https://t.me/+4X44Bx_3AhU1NzU0" target="_blank" style="background: #0088cc; color: white;">📲 Telegram</a>
             <a href="https://github.com/linux-sverige" style="background: #333; color: white;">GitHub</a>
         </div>
@@ -134,17 +174,16 @@
             <a href="/kontakt.html" style="color: white; text-decoration: none; margin: 0 15px;">Kontakt</a>
             <a href="/case-studies/frankrike.html" style="color: white; text-decoration: none; margin: 0 15px;">Case Studies</a>
             <a href="/europeiska-alternativ.html" style="color: white; text-decoration: none; margin: 0 15px;">Europeiska Alternativ</a>
-            <a href="/cloud-act.html" style="color: #ffb800; text-decoration: none; margin: 0 15px;">⚠️ CLOUD Act</a>
+            <a href="/cloud-act.html" style="color: #ffb800; text-decoration: none; margin: 0 15px;">⚠️ Molnhot</a>
             <a href="/priser.html" style="color: #ffb800; text-decoration: none; margin: 0 15px;">💰 Priser</a>
-            <a href="/nextcloud-home.html" style="color: #ffb800; text-decoration: none; margin: 0 15px;">📦 Nextcloud Home</a>
-            <a href="/nextcloud-paket.html" style="color: #ffb800; text-decoration: none; margin: 0 15px;">☁️ Nextcloud Tjänster</a>
-            <a href="https://footloose.cloud" style="color: #e74c3c; text-decoration: none; margin: 0 15px; font-weight: bold;">🚀 Footloose Cloud</a>
+            <a href="/nextcloud-home.html" style="color: #ffb800; text-decoration: none; margin: 0 15px;">🏠 Nextcloud Hemma</a>
+            <a href="/business-moln.html" style="color: #ffb800; text-decoration: none; margin: 0 15px;">🏢 Business Moln</a>
             <a href="https://github.com/linux-sverige" style="color: white; text-decoration: none; margin: 0 15px;">GitHub</a>
         </div>
     </nav>
     <footer>
         <div class="container">
-            <p>🐧 Linux Sverige (stiftelse) | Varumärke: <a href="https://footloose.cloud" style="color: #e74c3c; font-weight: bold;">Footloose Cloud</a> | <a href="https://github.com/linux-sverige">GitHub</a> | <a href="/om-oss.html">Om oss</a> | <a href="/kontakt.html">Kontakt</a> | <a href="mailto:ask@linux-sverige.se">ask@linux-sverige.se</a></p>
+            <p>🐧 Linux Sverige (stiftelse) | <a href="https://github.com/linux-sverige">GitHub</a> | <a href="/om-oss.html">Om oss</a> | <a href="/kontakt.html">Kontakt</a> | <a href="mailto:ask@linux-sverige.se">ask@linux-sverige.se</a></p>
         </div>
     </footer>
 </body>
