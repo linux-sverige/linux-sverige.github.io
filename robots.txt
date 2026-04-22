@@ -1,0 +1,13 @@
+# Robots.txt for linux-sverige.se
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://linux-sverige.se/sitemap.xml
+
+# Crawl-delay for slower crawlers
+Crawl-delay: 10
+
+# Block admin/private areas
+Disallow: /admin/
+Disallow: /private/
