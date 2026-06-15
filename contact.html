@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - EUnion | Get in Touch</title>
+    <meta name="description" content="Contact EUnion for sales inquiries, support, or general questions. We're here to help you take control of your data.">
+    <meta name="keywords" content="contact EUnion, GDPR cloud support, European cloud sales">
+    <link rel="canonical" href="https://european-union.cloud/contact.html">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Contact page specific styles */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .contact-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        
+        .contact-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-card h3 {
+            color: #003399;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-card p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-info-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .contact-info-list li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .contact-info-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .contact-info-list .icon {
+            width: 40px;
+            height: 40px;
+            background: #003399;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- EU Flag Bar -->
+    <div class="eu-flag-bar">Made in Europe for Europeans 🇪🇺</div>
+    
+    <!-- Page Hero -->
+    <header class="page-hero">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We're here to help you take control of your data</p>
+        </div>
+    </header>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">E<span>Union</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="features.html">Features</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="active">Contact</a>
+                <div class="language-switch">
+                    <a href="contact.html" class="active">🇬🇧 EN</a>
+                    <a href="contact-sv.html">🇸🇪 SV</a>
+                </div>
+            </div>
+            <div class="nav-toggle" id="navToggle" onclick="toggleNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Contact Options -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="section-title">
+                <h2>How Can We Help?</h2>
+                <p>Choose the best way to reach us</p>
+            </div>
+            
+            <div class="grid grid-3">
+                <div class="contact-card">
+                    <div class="icon">💬</div>
+                    <h3>Support</h3>
+                    <p>Need help with your account or have technical questions?</p>
+                    <a href="https://support.snozze.email" class="btn btn-primary" target="_blank">Help Center</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="icon">💼</div>
+                    <h3>Sales</h3>
+                    <p>Questions about pricing, enterprise plans, or migration?</p>
+                    <a href="mailto:sales@eunion.cloud" class="btn btn-primary">Contact Sales</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="icon">✉️</div>
+                    <h3>General</h3>
+                    <p>Partnerships, press, or other inquiries?</p>
+                    <a href="mailto:hello@eunion.cloud" class="btn btn-primary">Email Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Form & Info -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="card">
+                    <h3 style="color: #003399; margin-bottom: 1.5rem;">Send us a Message</h3>
+                    
+                    <form action="#" method="POST" id="contactForm">
+                        <div class="form-group">
+                            <label class="form-label" for="name">Your Name *</label>
+                            <input type="text" id="name" name="name" class="form-input" required placeholder="John Doe">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-input" required placeholder="john@company.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="subject">Subject *</label>
+                            <select id="subject" name="subject" class="form-select" required>
+                                <option value="">Select a subject...</option>
+                                <option value="sales">Sales Inquiry</option>
+                                <option value="support">Technical Support</option>
+                                <option value="partnership">Partnership Opportunity</option>
+                                <option value="press">Press/Media</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="company">Company (Optional)</label>
+                            <input type="text" id="company" name="company" class="form-input" placeholder="Your Company Name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="message">Your Message *</label>
+                            <textarea id="message" name="message" class="form-textarea" required placeholder="Tell us how we can help you..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label style="display: flex; align-items: flex-start; gap: 0.5rem; cursor: pointer;">
+                                <input type="checkbox" name="privacy" required style="margin-top: 0.25rem;">
+                                <span style="font-size: 0.9rem; color: #666;">I agree to the processing of my personal data according to the <a href="#">Privacy Policy</a>. *</span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                    </form>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="card">
+                    <h3 style="color: #003399; margin-bottom: 1.5rem;">Contact Information</h3>
+                    
+                    <ul class="contact-info-list">
+                        <li>
+                            <div class="icon">📧</div>
+                            <div>
+                                <strong>Email</strong><br>
+                                <a href="mailto:hello@eunion.cloud">hello@eunion.cloud</a>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="icon">💼</div>
+                            <div>
+                                <strong>Sales</strong><br>
+                                <a href="mailto:sales@eunion.cloud">sales@eunion.cloud</a>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="icon">🛟</div>
+                            <div>
+                                <strong>Support</strong><br>
+                                <a href="https://support.snozze.email" target="_blank">Help Center</a>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="icon">🏢</div>
+                            <div>
+                                <strong>Company</strong><br>
+                                EUnion AB<br>
+                                <span style="color: #666; font-size: 0.9rem;">European Union</span>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #e9ecef;">
+                        <h4 style="color: #003399; margin-bottom: 1rem;">Office Hours</h4>
+                        <p style="color: #666; margin-bottom: 0.5rem;"><strong>Monday - Friday:</strong> 09:00 - 17:00 CET</p>
+                        <p style="color: #666; font-size: 0.9rem;">Support is available 24/7 through our Help Center</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="section bg-white">
+        <div class="container-narrow">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="card mb-2">
+                <h4>How quickly do you respond to inquiries?</h4>
+                <p style="color: #666;">We aim to respond to all inquiries within 24 hours during business days. Enterprise customers receive priority support with faster response times.</p>
+            </div>
+            
+            <div class="card mb-2">
+                <h4>Can I schedule a demo?</h4>
+                <p style="color: #666;">Yes! Contact our sales team and we'll arrange a personalized demonstration of EUnion for your organization.</p>
+            </div>
+            
+            <div class="card mb-2">
+                <h4>Do you offer migration assistance?</h4>
+                <p style="color: #666;">Yes, our team can help you migrate from existing platforms like Microsoft 365 or Google Workspace. Contact sales for details.</p>
+            </div>
+            
+            <div class="card">
+                <h4>Is my data secure when I contact you?</h4>
+                <p style="color: #666;">All communications are encrypted. We never store sensitive information longer than necessary and follow strict data handling procedures.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="section bg-primary">
+        <div class="container text-center">
+            <h2 style="color: white; margin-bottom: 1rem;">Ready to Take Control?</h2>
+            <p style="color: rgba(255,255,255,0.9); font-size: 1.2rem; margin-bottom: 2rem;">Start your free 30-day trial today. No credit card required.</p>
+            <a href="pricing.html" class="btn btn-accent btn-lg">View Pricing</a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="features.html">Email &amp; Calendar</a></li>
+                        <li><a href="features.html">File Storage</a></li>
+                        <li><a href="features.html">Chat &amp; Video</a></li>
+                        <li><a href="features.html">Collaboration</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About EUnion</a></li>
+                        <li><a href="about.html">Our Union</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="about.html">GDPR Guide</a></li>
+                        <li><a href="https://support.snozze.email">Help Center</a></li>
+                        <li><a href="#">API</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Data Processing</a></li>
+                        <li><a href="#">Imprint</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>🇪🇺 Made with pride in Europe · EUnion · <a href="mailto:hello@eunion.cloud">hello@eunion.cloud</a></p>
+                <p style="margin-top: 0.5rem; opacity: 0.7;">Your Data, Your Union</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        function toggleNav() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+        
+        document.addEventListener('click', function(e) {
+            const nav = document.querySelector('.navbar');
+            const navLinks = document.getElementById('navLinks');
+            if (!nav.contains(e.target) && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+            }
+        });
+        
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you within 24 hours.\n\nNote: This is a demo form. In production, this would send your message to our team.');
+        });
+    </script>
+</body>
+</html>
