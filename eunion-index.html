@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EUnion - Your Data, Your Union | Europe's GDPR-Native Cloud</title>
+    <meta name="description" content="EUnion is Europe's GDPR-native alternative to Office 365. Email, calendar, files, chat and collaboration - hosted in the EU, controlled by you.">
+    <meta name="keywords" content="Office 365 alternative, GDPR cloud, EU hosting, European cloud, Microsoft 365 alternative, data sovereignty, privacy cloud">
+    <meta name="author" content="EUnion">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://eunion.cloud/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eunion.cloud/">
+    <meta property="og:title" content="EUnion - Your Data, Your Union">
+    <meta property="og:description" content="Europe's GDPR-native alternative to Office 365. Hosted in the EU, controlled by you.">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="EUnion">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://eunion.cloud/">
+    <meta name="twitter:title" content="EUnion - Your Data, Your Union">
+    <meta name="twitter:description" content="Europe's GDPR-native alternative to Office 365.">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background: #f5f5f5; 
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* EU Flag Header Bar */
+        .eu-flag-bar {
+            background: linear-gradient(90deg, #003399 0%, #003399 100%);
+            padding: 8px 0;
+            text-align: center;
+            color: #FFCC00;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        .eu-flag-bar::before {
+            content: "🇪🇺 ";
+        }
+        
+        /* Header */
+        header { 
+            background: linear-gradient(135deg, #003399 0%, #002266 100%); 
+            color: white; 
+            padding: 80px 0; 
+            text-align: center; 
+            position: relative;
+        }
+        header::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #003399 0%, #FFCC00 50%, #003399 100%);
+        }
+        .logo { 
+            font-size: 4rem; 
+            font-weight: 800; 
+            margin-bottom: 10px;
+            letter-spacing: -2px;
+        }
+        .logo span { color: #FFCC00; }
+        .tagline { 
+            font-size: 1.8rem; 
+            opacity: 0.95; 
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+        .subtitle { 
+            font-size: 1.3rem; 
+            opacity: 0.85; 
+            max-width: 700px; 
+            margin: 0 auto;
+            font-weight: 300;
+        }
+        .gdpr-badge {
+            display: inline-block;
+            background: #FFCC00;
+            color: #003399;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            margin-top: 30px;
+            font-size: 1rem;
+        }
+        
+        /* Navigation */
+        nav {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-logo { 
+            font-size: 1.8rem; 
+            font-weight: 700; 
+            color: #003399;
+        }
+        .nav-logo span { color: #FFCC00; }
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: #003399; }
+        .language-switch {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .language-switch a {
+            padding: 5px 12px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+        .language-switch a.active {
+            background: #003399;
+            color: white;
+        }
+        
+        /* Hero */
+        .hero { 
+            background: white; 
+            padding: 80px 0; 
+            text-align: center; 
+        }
+        .hero h2 { 
+            color: #003399; 
+            font-size: 2.5rem; 
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        .hero > p { 
+            max-width: 800px; 
+            margin: 0 auto 30px; 
+            font-size: 1.2rem; 
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        /* Features Grid */
+        .features-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 30px; 
+            max-width: 1000px; 
+            margin: 40px auto 0; 
+        }
+        .feature-card { 
+            background: #f8f9fa; 
+            border-radius: 15px; 
+            padding: 40px 30px; 
+            text-align: center; 
+            border: 2px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover { 
+            border-color: #003399; 
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,51,153,0.1);
+        }
+        .feature-card .icon { 
+            font-size: 3.5rem; 
+            margin-bottom: 20px;
+            display: block;
+        }
+        .feature-card h3 { 
+            color: #003399; 
+            margin-bottom: 15px; 
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* Why EU Section */
+        .why-eu {
+            background: linear-gradient(135deg, #003399 0%, #002266 100%);
+            color: white;
+            padding: 80px 0;
+        }
+        .why-eu h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+        }
+        .why-eu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+        .why-eu-card {
+            text-align: center;
+            padding: 20px;
+        }
+        .why-eu-card .icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+        .why-eu-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #FFCC00;
+        }
+        .why-eu-card p {
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+        
+        /* GDPR Badge Section */
+        .gdpr-section {
+            background: #FFCC00;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .gdpr-section h2 {
+            color: #003399;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .gdpr-section p {
+            color: #333;
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+        
+        /* Comparison Section */
+        .comparison {
+            background: white;
+            padding: 80px 0;
+        }
+        .comparison h2 {
+            text-align: center;
+            color: #003399;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+        }
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .comparison-card {
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        .comparison-card.us {
+            background: #f8f9fa;
+            border: 2px solid #ddd;
+        }
+        .comparison-card.eu {
+            background: linear-gradient(135deg, #003399 0%, #002266 100%);
+            color: white;
+            border: 2px solid #003399;
+        }
+        .comparison-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+        }
+        .comparison-card ul {
+            list-style: none;
+            text-align: left;
+        }
+        .comparison-card li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .comparison-card.us li {
+            border-bottom-color: #ddd;
+            color: #666;
+        }
+        .comparison-card li:last-child {
+            border-bottom: none;
+        }
+        
+        /* CTA Section */
+        .cta {
+            background: #003399;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .cta p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        .btn-primary {
+            background: #FFCC00;
+            color: #003399;
+        }
+        .btn-primary:hover {
+            background: #ffd633;
+            transform: scale(1.05);
+        }
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        .btn-secondary:hover {
+            background: white;
+            color: #003399;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1a1a2e;
+            color: white;
+            padding: 60px 0 30px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-section h4 {
+            color: #FFCC00;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        .footer-section ul {
+            list-style: none;
+        }
+        .footer-section li {
+            margin-bottom: 10px;
+        }
+        .footer-section a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer-section a:hover {
+            color: white;
+        }
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 30px;
+            text-align: center;
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            header { padding: 60px 0; }
+            .logo { font-size: 2.5rem; }
+            .tagline { font-size: 1.3rem; }
+            .subtitle { font-size: 1rem; }
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- EU Flag Bar -->
+    <div class="eu-flag-bar">
+        Made in Europe for Europeans 🇪🇺
+    </div>
+    
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">E<span>Union</span></div>
+            <div class="tagline">Your Data, Your Union</div>
+            <div class="subtitle">Europe's GDPR-Native Alternative to Office 365</div>
+            <div class="gdpr-badge">✓ GDPR Native</div>
+        </div>
+    </header>
+    
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-logo">E<span>Union</span></div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#why-eu">Why EU?</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <div class="language-switch">
+                    <a href="index.html" class="active">🇬🇧 EN</a>
+                    <a href="index-sv.html">🇸🇪 SV</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero -->
+    <section class="hero" id="features">
+        <div class="container">
+            <h2>Everything You Need, Nothing You Don't</h2>
+            <p>Email, calendar, files, chat, and collaboration - all hosted in the EU, controlled by you. No US data centers. No CLOUD Act. No compromises.</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="icon">📧</span>
+                    <h3>Email & Calendar</h3>
+                    <p>Professional email with your domain. Shared calendars, contacts, and scheduling that respects your privacy.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="icon">📁</span>
+                    <h3>File Storage</h3>
+                    <p>Your documents, photos, and files - always available, always secure. Sync across all your devices.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="icon">💬</span>
+                    <h3>Chat & Video</h3>
+                    <p>Team chat, video calls, and screen sharing - without Big Tech listening in.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="icon">📋</span>
+                    <h3>Collaboration</h3>
+                    <p>Documents, spreadsheets, and whiteboards. Real-time collaboration with your team.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="icon">🔒</span>
+                    <h3>End-to-End Encryption</h3>
+                    <p>Your data is encrypted at rest and in transit. Only you hold the keys.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="icon">🇪🇺</span>
+                    <h3>EU Hosted</h3>
+                    <p>All data stays in European data centers. Protected by EU law, not US jurisdiction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Why EU Section -->
+    <section class="why-eu" id="why-eu">
+        <div class="container">
+            <h2>Why Choose European Cloud?</h2>
+            <div class="why-eu-grid">
+                <div class="why-eu-card">
+                    <span class="icon">⚖️</span>
+                    <h3>GDPR Protection</h3>
+                    <p>Your data is protected by the world's strongest privacy legislation. We don't just comply - we embrace it.</p>
+                </div>
+                <div class="why-eu-card">
+                    <span class="icon">🏛️</span>
+                    <h3>No CLOUD Act</h3>
+                    <p>US laws like the CLOUD Act and Patriot Act don't apply here. Your data can't be accessed by US authorities.</p>
+                </div>
+                <div class="why-eu-card">
+                    <span class="icon">🔐</span>
+                    <h3>Data Sovereignty</h3>
+                    <p>Your data belongs to you, physically stored in Europe. True digital sovereignty for individuals and businesses.</p>
+                </div>
+                <div class="why-eu-card">
+                    <span class="icon">🤝</span>
+                    <h3>Union Strong</h3>
+                    <p>Together we're building a European alternative to Big Tech. Join the union for digital independence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- GDPR Section -->
+    <section class="gdpr-section">
+        <div class="container">
+            <h2>🛡️ GDPR-Native by Design</h2>
+            <p>We're not just GDPR compliant - we're GDPR native. Privacy isn't an afterthought; it's the foundation of everything we build. From data minimization to the right to be forgotten, GDPR principles guide our architecture.</p>
+        </div>
+    </section>
+    
+    <!-- Comparison Section -->
+    <section class="comparison">
+        <div class="container">
+            <h2>The Choice is Yours</h2>
+            <div class="comparison-grid">
+                <div class="comparison-card us">
+                    <h3>🇺🇸 US Cloud</h3>
+                    <ul>
+                        <li>❌ Subject to CLOUD Act</li>
+                        <li>❌ US data centers</li>
+                        <li>❌ Data may be accessed by US agencies</li>
+                        <li>❌ Privacy as compliance checkbox</li>
+                        <li>❌ Profiling and data mining</li>
+                    </ul>
+                </div>
+                <div class="comparison-card eu">
+                    <h3>🇪🇺 EUnion</h3>
+                    <ul>
+                        <li>✅ Protected by EU law</li>
+                        <li>✅ EU-only data centers</li>
+                        <li>✅ No foreign government access</li>
+                        <li>✅ Privacy by design</li>
+                        <li>✅ Your data, your control</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta" id="contact">
+        <div class="container">
+            <h2>Join the Union</h2>
+            <p>Take back control of your data. Switch to Europe's GDPR-native cloud today.</p>
+            <div class="cta-buttons">
+                <a href="mailto:hello@eunion.cloud" class="btn btn-primary">Get Started Free</a>
+                <a href="mailto:hello@eunion.cloud" class="btn btn-secondary">Contact Sales</a>
+                <a href="https://support.snozze.email/help/3621177716" class="btn btn-secondary">Create Support Ticket</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#">Email & Calendar</a></li>
+                        <li><a href="#">File Storage</a></li>
+                        <li><a href="#">Chat & Video</a></li>
+                        <li><a href="#">Collaboration</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About EUnion</a></li>
+                        <li><a href="#">Our Union</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">GDPR Guide</a></li>
+                        <li><a href="https://support.snozze.email/help/3621177716">Help Center</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="https://www.cvbc.es/privacy-policy/">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Data Processing</a></li>
+                        <li><a href="#">Imprint</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>🇪🇺 Made with pride in Europe · EUnion AB · hello@eunion.cloud</p>
+                <p style="margin-top: 10px; opacity: 0.7;">Formerly Linux Sverige · <a href="https://linux-sverige.se" style="color: #888;">linux-sverige.se</a> → eunion.cloud</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
