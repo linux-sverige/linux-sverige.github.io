@@ -142,6 +142,120 @@
             color: white;
         }
         
+        /* The Problem Section */
+        .problem-section {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: white;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .problem-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(220, 53, 69, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 193, 7, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(220, 53, 69, 0.08) 0%, transparent 40%);
+            pointer-events: none;
+        }
+        .problem-section .container {
+            position: relative;
+            z-index: 1;
+        }
+        .problem-section h2 {
+            color: #dc3545;
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .problem-section h2::before {
+            content: "⚠️ ";
+        }
+        .problem-intro {
+            font-size: 1.3rem;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 50px;
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .problem-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(220, 53, 69, 0.3);
+            border-radius: 15px;
+            padding: 35px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .problem-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #dc3545, #ffc107);
+            border-radius: 15px 15px 0 0;
+        }
+        .problem-card:hover {
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(220, 53, 69, 0.5);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(220, 53, 69, 0.15);
+        }
+        .problem-card .warning-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+        .problem-card h3 {
+            color: #ffc107;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        .problem-card p {
+            color: rgba(255,255,255,0.8);
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+        .problem-stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 60px;
+            flex-wrap: wrap;
+        }
+        .stat-item {
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #dc3545;
+            display: block;
+            text-shadow: 0 0 20px rgba(220, 53, 69, 0.3);
+        }
+        .stat-label {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.7);
+            margin-top: 5px;
+        }
+        
         /* Hero */
         .hero { 
             background: white; 
@@ -439,13 +553,50 @@
                 <a href="#pricing">Pricing</a>
                 <a href="#about">About</a>
                 <a href="#contact">Contact</a>
-                <div class="language-switch">
-                    <a href="index.html" class="active">🇬🇧 EN</a>
-                    <a href="index-sv.html">🇸🇪 SV</a>
-                </div>
             </div>
         </div>
     </nav>
+    
+    <!-- The Problem -->
+    <section class="problem-section" id="problem">
+        <div class="container">
+            <h2>The Problem</h2>
+            <p class="problem-intro">For decades, European data has flowed to American tech giants. We use their email, store our files on their servers, and trust them with our most sensitive communications. But there's a cost beyond the subscription fee:</p>
+            
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <span class="warning-icon">🇺🇸</span>
+                    <h3>The CLOUD Act</h3>
+                    <p>US authorities can access your European data without your knowledge or consent. The CLOUD Act and Patriot Act bypass European privacy protections, giving foreign governments direct access to your information.</p>
+                </div>
+                <div class="problem-card">
+                    <span class="warning-icon">🤖</span>
+                    <h3>AI Training & Profiling</h3>
+                    <p>Your data is used to train AI models and build detailed profiles about you, your business, and your contacts. Every email, every document, every conversation becomes training data for systems you don't control.</p>
+                </div>
+                <div class="problem-card">
+                    <span class="warning-icon">☑️</span>
+                    <h3>GDPR as Checkbox</h3>
+                    <p>European privacy laws are treated as compliance checkboxes, not design principles. "GDPR Compliant" often means the minimum legal requirement, not genuine respect for your data rights.</p>
+                </div>
+            </div>
+            
+            <div class="problem-stats">
+                <div class="stat-item">
+                    <span class="stat-number">85%</span>
+                    <span class="stat-label">of European data<br>stored in US clouds</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">0</span>
+                    <span class="stat-label">control over who<br>accesses your data</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">∞</span>
+                    <span class="stat-label">potential for<br>data misuse</span>
+                </div>
+            </div>
+        </div>
+    </section>
     
     <!-- Hero -->
     <section class="hero" id="features">
@@ -591,7 +742,7 @@
                 <div class="footer-section">
                     <h4>Resources</h4>
                     <ul>
-                        <li><a href="#">Documentation</a></li>
+                        <li><a href="https://support.snozze.email/hc/3621177716">Documentation</a></li>
                         <li><a href="#">GDPR Guide</a></li>
                         <li><a href="https://support.snozze.email/help/3621177716">Help Center</a></li>
                         <li><a href="#">Status</a></li>
@@ -613,5 +764,8 @@
             </div>
         </div>
     </footer>
+<!-- FreeScout BEGIN -->
+<script>var FreeScoutW={s:{"color":"#0068bd","position":"bl","id":1625002746}};(function(d,e,s){if(d.getElementById("freescout-w"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="freescout-w";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","https://support.snozze.email/modules/enduserportal/js/widget.js?v=2688");</script>
+<!-- FreeScout END -->
 </body>
 </html>
